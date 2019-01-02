@@ -12,6 +12,8 @@ I'm not just building any kind of server. It's specifically for ESXi, so it will
 
 The benefit of using a hypervisor for multiple VMs is that I can have only one physical server, but then use VMs to make many logical servers, with different OSes and containers and whatnot. I plan on eventually branching out and doing more than LAMP and MEAN, but maybe also learning Kubernetes/Docker, and other modern things like that. There's more to servers than web hosting. Containers and container orchestration are very interesting topics. 
 
+The installer for ESXi is an ISO, a relic from the past when people used optical media to install OSes. I will have to use a tool such as Rufus in order to make a bootable flash drive instead of burning an install CD/DVD, because this mini-ITX build doesn't have room for an optical drive. My desktop has a DVD drive, but I never use it. It's just taking up space. 
+
 I ordered parts online and tomorrow I'll do an in-store pickup and then build the server and set things up.
 
 ## Specs
