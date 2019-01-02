@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 2 Coding Progress"
+title: "Day 2: Coding Progress"
 date:   2018-12-28 08:02:12 -0600
 ---
 
