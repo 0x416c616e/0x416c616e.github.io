@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Day 6: Python and Server Plans"
-date:   2019-1-1 21:01:22 -0600
+date:   2019-01-01 18:01:22 -0600
 ---
 
 ## Ordering parts for a new server
