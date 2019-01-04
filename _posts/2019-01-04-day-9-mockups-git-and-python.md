@@ -13,6 +13,7 @@ My goals for January 4th are as follows:
 - Add new commands to my git learning repo
 - Updated log and website
 - **More Python prorgamming and learning!!!!** Read a lot of the book, maybe some Udemy Python stuff too
+- **Write a text-based RPG in Python**
 - Add .gitignore files to repos and get rid of .DS_Store and other junk like that, also add fonts gitignore to SLS website repo
 - Make at least a few more Keynote/LibreOffice mockups for static site generator
 
