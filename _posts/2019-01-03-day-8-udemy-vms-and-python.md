@@ -70,6 +70,6 @@ My last app was an encryption/decryption tool called EZcrypt, which aimed to mak
 
 And here's what the program ended up looking like when I finished it:
 
-![Actual EZcrypt screenshot](/assets/ez_mockup2.png)
+![Actual EZcrypt screenshot](/assets/ez_mockup2.PNG)
 
 The mockup, as well as notes I wrote down, helped to guide the project. It wasn't anywhere near as formal as something like UML, even though I'm familiar with UML. But I wanted something quick and visual, especially since I'm trying to do more GUI programs instead of command line stuff these days. These kinds of preparations are really useful and make the development process easier. 
