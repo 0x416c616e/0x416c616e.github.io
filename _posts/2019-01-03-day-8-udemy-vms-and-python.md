@@ -73,3 +73,9 @@ And here's what the program ended up looking like when I finished it:
 ![Actual EZcrypt screenshot](/assets/ez_mockup2.PNG)
 
 The mockup, as well as notes I wrote down, helped to guide the project. It wasn't anywhere near as formal as something like UML, even though I'm familiar with UML. But I wanted something quick and visual, especially since I'm trying to do more GUI programs instead of command line stuff these days. These kinds of preparations are really useful and make the development process easier. 
+
+I'm going to do the same thing for my static site generator.
+
+![Static Site Generator 1st mockup](/assets/rough_mockup1.PNG)
+
+ Here's a very basic beginning. It's not great, nor is it finished. but it's the first mockup for the first (of many) screens. This mockup was made with LibreOffice Impress as opposed to Keynote, so it looks worse, and it's clunkier to use too. But I'm trying to use Windows more instead of mostly just using macOS. 
