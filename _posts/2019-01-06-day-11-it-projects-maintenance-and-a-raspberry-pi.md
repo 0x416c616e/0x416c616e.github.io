@@ -1,7 +1,7 @@
 ---
 layout: "post"
-title: "Day 10: IT Projects, Maintenance, and a Raspberry Pi"
-date:   2019-01-06 20:12:37 -0600
+title: "Day 11: IT Projects, Maintenance, and a Raspberry Pi"
+date:   2019-01-06 8:12:37 -0600
 ---
 
 ## IT Projects
