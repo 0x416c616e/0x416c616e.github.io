@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 10: IT Projects and Maintenance"
+title: "Day 10: IT Projects, Maintenance, and a Raspberry Pi"
 date:   2019-01-06 20:12:37 -0600
 ---
 
@@ -13,13 +13,13 @@ I am making more in-depth plans for some IT-related projects I want to do. I'm a
 Here are some ideas I have so far:
 - Getting a Cisco Catalyst 2950 or 2960 because I need a multi-port switch, and also it'd be good to get a refresher on Cisco IOS, instead of letting my old IT classes go to waste
 - Setting up a pfSense firewall -- DD-WRT seems okay most of the time, but I'd like to set up another dedicated firewall. I used to have one and I'm not sure why I didn't do it again.
-- Raspbian wake-on-LAN server -- it will be on 24/7, with sleep mode disabled, and have a cron.weekly script to turn all computers on for weekly backups/updates/scans.
+- Raspbian wake-on-LAN server -- it will be on 24/7, with sleep mode disabled, and have a cron.weekly script to turn all computers on for weekly backups/updates/scans. Probably the easiest of these projects.
 - Setting up another old computer as a second hypervisor, because my budget ESXi hypervisor may or may not be enough for my VM and Docker container needs. It might be good to use a different hypervisor, such as Citrix XenServer, rather than doing everything in ESXi. That way, I'll get experience with multiple platforms instead of just one.
 - Nagios SIEM, possibly with the Splunk add-on. SIEMs are a big deal and I think I need to get more experience with enterprise security. Anti-malware software is not a fully-fledged security solution, so things like this are important.
 - SnortIDS -- I don't know too much about intrusion detection systems, except that Snort comes up a lot among people who know a thing or two in infosec or IT.
 - Bitnami LAMP server VM -- for my upcoming web development projects
 - Kubernetes and Docker -- some apps don't need entire VMs. Sometimes, they just need a container. You can have multiple Docker containers and manage them with Kubernetes. 
-- osTicket ticketing system -- for tech support tickets, when people have issues with computers or software. This could potentially be in a container, within a Linux VM, within ESXi. Kind of unnecessary to set it up that way, but then I'd learn a lot of useful topics.
+- osTicket ticketing system -- for tech support tickets, when people have issues with computers or software. This could potentially be in a container, within a Linux VM, within ESXi. Kind of unnecessary to set it up that way, but then I'd learn a lot of useful topics. Probably one of the easiest projects here.
 - PiHole DNS sinkhole for ad blocking -- a fun and interesting network-based ad blocking project. Nowadays, because of problems like malvertising, ad blocking is basically a security measure, not just a way to get rid of annoying ads.
 - Windows Server -- terms like "active directory" and "domain controller" get brought up a lot in IT and pentesting, so I should get familiar with it.
 
@@ -51,6 +51,14 @@ I have a Raspberry Pi that I installed Raspbian on. The HTTP download of Raspbia
 
 ![Raspberry Pi wake-on-lan](/assets/wake_on_lan_pi.png)
 
+Lastly, I set up SSH on the Raspberry Pi so I can access it on my MacBook or desktop rather than hooking up a keyboard, mouse, and monitor (or KVM) to the Pi itself.
+
+![Logging in to a Raspberry Pi over SSH](/assets/pi_ssh.png)
+
 ## More Udemy learning
 
 I did more lessons on Udemy today.
+
+## .gitignore
+
+I added a .gitignore to all my repositories, and made sure to ignore .DS_Store, which is a common annoyance on macOS.
