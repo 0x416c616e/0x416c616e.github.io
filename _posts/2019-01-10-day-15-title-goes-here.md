@@ -34,7 +34,11 @@ So I looked online and found some 50Ω 3-pin fan resistor cables instead. With o
 
 ## Python
 
-Continued to learn more about Python.
+Continued to learn more about Python. Aside from Python Crash Course, I am also doing a self-paced video and programming course on Udemy called Complete Python Bootcamp. There are occasionally exercises, but it's a little less hands-on than the Python Crash Course book. Even though there are programming exercises, they are browser-based, so I don't commit them to my python learning repositories, so it might not look like I'm doing much even when I am. 
+
+The Python Crash Course book and this Udemy course are structured a little differently, so I pick up on bits and pieces from each course and they cover different things that the other doesn't have. It's interesting to do it with multiple perspectives about what's important in this language. 
+
+I am getting closer to feeling more confident in my ability to write at least a command-line static site generator, even if I don't have the Qt GUI framework know-how for the visual frontend compoenents just yet. But that will come later.
 
 ## Jekyll Pagination and Disqus Comments
 
@@ -59,4 +63,17 @@ I want to take a break from doing non-coding tech projects and concentrate more 
 I set up a KVM so that I can use my single mouse and keyboard to control multiple devices. KVM stands for Keyboard, Video and Mouse. Right now, it's just hooked up to my desktop and the on-hold server project. I would have hooked it up to my hypervisor as well, but the hypervisor only has onboard HDMI, and my cheap KVM only has VGA cables for video. Besides, the hypervisor is mostly controlled through the web interface anyway.
 
 I also have some cables so I can use it with my macbook if I really want to, though macOS seems better geared towards touchpad usage instead of a mouse. 
+
+## Auth tokens and passwords accidentally put on GitHub
+
+I've accidentally come across some repositories where people put private credentials in a public repository. Now that's not to say that the entire project needs to be private, but I have a very easy solution:
+
+1. put access tokens, passwords, usernames, etc. in a separate config file. Doesn't matter if it's JSON, txt, csv, whatever. ANYTHING. It just has to be a separate file.
+2. create a .gitignore file and put the file name(s) of the config file(s). Only one term per line. 
+
+.gitignore is a really powerful but simple concept in version control becaues you can do lazy commands like git add -A to add all files to commit, yet the files specified in the .gitignore will still be ignored, even though the command supposedly adds all files (it's all except the ones you specifically want to ignore).
+
+**So what does this mean for me?**
+
+It means I might be able to create issues or pull requests telling people to remove this sensitive login information from their repos, and also include some basic steps for how they can do it.
 
