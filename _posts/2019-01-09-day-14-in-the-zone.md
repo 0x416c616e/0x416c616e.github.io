@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 13: In The Zone"
+title: "Day 14: In The Zone"
 date:   2019-01-09 8:23:04 -0600
 ---
 
@@ -16,7 +16,7 @@ It takes a while to be fully alert, clear your mind of all distractions, not be 
 
 When you finally get in the zone for programming, even if it's only for a few hours in a day, you can get much more accomplished in a short amount of time. 
 
-Thne it's late, and you're still in the zone, and you don't want to leave, because you know even 15 minutes of coding in the zone can be more productive than the first hour of the next day because you'll have to reorient yourself and remember all of what you were doing and everything you need to consider. 
+Then it's late, and you're still in the zone, and you don't want to leave, because you know even 15 minutes of coding in the zone can be more productive than the first hour of the next day because you'll have to reorient yourself and remember all of what you were doing and everything you need to consider. 
 
 ## How music helps programming
 
@@ -112,3 +112,30 @@ I enabled 2-factor authentication on one of my 2 public-facing web servers. I ha
 
 I really like the Python Crash Course book, because unlike other books I've read about programming, it gives you short and easy exercises to complete after every new concept it covers. In one Java textbook I had during my freshman year, it featured huge projects for the user to complete, which weren't assigned for homework, so I just never did any of them. They were too demanding of your time. Meanwhile, another entry-level Python book I read didn't really have you doing much at all. Python Crash Course's exercises are good because they demonstrate concepts but don't take too long to complete.
 
+## p4merge
+
+I learned about diff and merge stuff today. I set up a tool called p4merge instead of using the default vimdiff tool. This is useful for git.
+
+## Hotfixes, best practices, and technical debt
+
+As I wrote about in a previous entry, my desktop's power supply was very poorly designed: it's silent most of the time because it turns its fan off unless it gets too hot, and then it turns the fan on full speed. This means that, most of the time, my computer is completely silent, because I have quiet fans, a fan controller, and a case with sound-dampening material. So for the most part, I can code without any interruptions. But once you do anything power-intensive, such as watching a video tutorial or compiling code, or running a virtual machine, it increases power, which increases the PSU load, causing it to get hotter, which means it turns the fan on -- very loudly, too. A little bit of constant noise is no big deal, but it's really distracting when it's silent most of the time and loud every now and then. 
+
+I could just buy a new ATX PSU altogether, but that would be more expensive and then I'd have to spend a lot of time redoing all the cable management in my computer, which I'd rather avoid if at all possible, considering all the effort I put into routing all cables behind the motherboard tray and cleaning things up with a lot of zip ties. So I came up with an imperfect solution that still works: putting intake and exhaust fans on the outside of the case, lining up with the intake and exhaust vents of the power supply. I got a board that allows me to use a barrel-jack AC adapter with DC computer fans, which I did. Now I have two 120mm fans, so the power supply stays cool. 
+
+Because it's hard to mount fans on the outside of a case, I duct-taped them to the case to keep them from moving. And because one of the fans was making a grinding sound because of the way I taped it, I had to use some cardboard to correct the position so it wouldn't make the annoying noise anymore. 
+
+So it's a very inelegant solution that gets the job done. I could call this a temporary fix, or a hotfix, but there have been many of these so-called temporary fixes I've implemented that end up becoming permanent. This isn't really ideal, and to apply this to coding, sometimes a hack-y patch on top of bad code can fix a problem temporarily, but it makes maintainability and extensibility difficult. But sometimes, you really need to fix something then and there. Then you can refactor it later... or in all likelihood, just leave it as is. This is a bad practice that I try to avoid with my coding, but it admittedly happens every now and then.
+
+But sometimes an inelegant solution is better than none at all. I've known people who put things off because they're waiting for the perfect time to do it. Going to the gym to start lifting weights, for example. If you're waiting for a perfect time to do something, you might just end up putting it off forever. When compared to not doing anything at all, my quick-and-dirty power supply fix is definitely better than not doing anything at all. 
+
+Could it be better? Sure. But it could also be worse -- not fixing it all is definitely worse. Sometimes people have unrealistic expectations about things, especially when you consider time limitations. Software is limited by deadlines, and when you don't want to put a ton of time (and potentially money) into something, you have to be inventive about things that get the job done well enough, even if it's not necessarily a best practice. 
+
+I'm all about best practices for code, like documentation and commenting things, making functions and classes modular and fully encapsulating rather than writing spaghetti code or cargo cult copy-and-paste-from-Stack-Overflow-and-hope-it-works programming (which I try to avoid), and things like that. As someone (whose name escapes me) once said, perfect is the enemy of good. If you want to do something perfectly, that's going to stop you from doing a good job, because doing something perfectly -- the *one right way* -- might take way too much time, and it'd be a really daunting task.
+
+I've heard some people say they can't learn coding because they're "not a tech person" or they can't study computer science because they're "bad at math" and other such nonsense. What they're saying is they have these imagined prerequisite conditions in their head that have to occur before they can just start doing what they want to do. They're thinking about doing things *the right way* rather than just jumping right in and doing it.
+
+If a good way to write a quick program takes you a few hours, and *the right way* to write it takes 20 more, which is really better? Of course, conversely, doing something quickly and poorly, which saves you time in the short-term, can create a lot of headaches in the future, thereby eliminating any imagined time savings. Technical debt. Any sort of "fast" method of doing something that accumulates technical debt isn't fast at all. 
+
+My power supply hotfix doesn't really create much technical debt. At most, it would take me a couple minutes to remove the fans, then all it'd take is the normal amount of effort to replace the power supply and do all the cabling again. In this case, doing a simple cost-benefit analysis shows it's worth doing because there is a lot to gain by adding the fans, and the cost of time for removing the fans is pretty much negligible. Not all hotfixes are like that though.
+
+I guess that was really long-winded, but what I'm trying to say is that the way you program has to be conscious of how long something will take to implement. Time management is a crucial aspect of programming -- whether it's big O notation for an algorithm, or basing your coding sprint around meeting a certain deadline so you can ship a product. Time is hugely important for coding, but that includes the time required for implementing future features and maintaining the current codebase. 
