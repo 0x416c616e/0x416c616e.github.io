@@ -30,7 +30,12 @@ There are really two categories of music I listen to: music for active listening
 
 ## osTicket, Bitnami, and MySQL databases
 
-I still haven't fixed osticket just yet, but I did manage to combine a few online tutorials to come up with this list of commands for an initial setup on Bitnami, this time using a different Bitnami LAMP 5.6 stack instead of the 7.1 version I was using before:
+![osTicket screenshot](/assets/osticket_installation.PNG)
+
+I still haven't fixed osticket just yet (I installed it but there are errors), but I did manage to combine a few online tutorials to come up with this list of commands for an initial setup on Bitnami, this time using a different Bitnami LAMP 5.6 stack instead of the 7.1 version I was using before:
+
+![Bitnami LAMP 5.6](/assets/bitnami_lamp_5_6.PNG)
+
 
 ```
 cd /opt/bitnami/apache2/htdocs
@@ -76,6 +81,8 @@ Nobody thinks Java or PHP are cool, but they are still widely used. I think it's
 
 ## PHP on shared servers
 
+![PHP selector](/assets/php_selector.PNG)
+
 Namecheap servers run a special data center-oriented Linux distro called CloudLinux. They have cPanel and Softaculous installed within them, and they typically run LAMP stuff, but now they've branched out and have support for Node and Python stuff too (though I haven't done that on Namecheap just yet). But one interesting tool in Namecheap's cPanel web dashboard is that you can choose which version of PHP your server runs. This will affect every website you have running on that server. In my case, I have a few Wordpress sites, as well as some sites I've written from scratch.
 
 Because of news about PHP 5.6 no longer getting security support, I decided to upgrade my PHP version.
@@ -90,9 +97,15 @@ Android is another fragmentation offender. So many phones never get updates, so 
 
 ## Wordpress works on PHP 7.2, but not 7.3
 
+![SFR website error](/assets/sfr_error.PNG)
+
 When I upgraded my servers from 5.6 to 7.0, Wordpress gave me warning messages about how PHP 7.0 isn't secure and that I need to update it. So within cPanel on my CloudLinux Namecheap server, I used the PHP version selector tool to update to PHP 7.3. I hit save and thought nothing of it for a while.
 
+![Jetpack email about downtime](/assets/jetpack_email.PNG)
+
 Then I got an email from Jetpack Monitor notifying me that my site was down. So I checked it out myself, and sure enough, neither of my Wordpress sites on that server were accessible anymore. I got 500 internal server errors. 
+
+![PHP 7.2](/assets/php_7_2.PNG)
 
 So I downgraded to PHP 7.2 and now it works just fine.
 
@@ -106,13 +119,17 @@ My annoying experiences with Wordpress, PHP, and Jekyll/Ruby are precisely why I
 
 ## cPanel 2FA
 
-I enabled 2-factor authentication on one of my 2 public-facing web servers. I had 2FA on the other one already. Now both of my online web servers are properly secure. My ESXi hypervisor is not publicly available on the internet though. I don't think it'd be wise to put a PHP 5.6 server on the internet in this day and age, even if osTicket requires it.
+![cPanel 2FA](/assets/cpanel_2fa.PNG)
+
+I enabled 2-factor authentication on one of my 2 public-facing web servers. I had 2FA on the other one already. Now both of my online web servers are properly secure. My ESXi hypervisor is not publicly available on the internet though. I don't think it'd be wise to put a PHP 5.6 server on the internet in this day and age, even if osTicket requires it. I use Google Authenticator on my phone for 2FA, as opposed to less secure SMS-based 2FA.
 
 ## More Python exercises
 
 I really like the Python Crash Course book, because unlike other books I've read about programming, it gives you short and easy exercises to complete after every new concept it covers. In one Java textbook I had during my freshman year, it featured huge projects for the user to complete, which weren't assigned for homework, so I just never did any of them. They were too demanding of your time. Meanwhile, another entry-level Python book I read didn't really have you doing much at all. Python Crash Course's exercises are good because they demonstrate concepts but don't take too long to complete.
 
 ## p4merge
+
+![p4merge](/assets/p4merge.PNG)
 
 I learned about diff and merge stuff today. I set up a tool called p4merge instead of using the default vimdiff tool. This is useful for git.
 
@@ -122,7 +139,11 @@ As I wrote about in a previous entry, my desktop's power supply was very poorly 
 
 I could just buy a new ATX PSU altogether, but that would be more expensive and then I'd have to spend a lot of time redoing all the cable management in my computer, which I'd rather avoid if at all possible, considering all the effort I put into routing all cables behind the motherboard tray and cleaning things up with a lot of zip ties. So I came up with an imperfect solution that still works: putting intake and exhaust fans on the outside of the case, lining up with the intake and exhaust vents of the power supply. I got a board that allows me to use a barrel-jack AC adapter with DC computer fans, which I did. Now I have two 120mm fans, so the power supply stays cool. 
 
+![fan board](/assets/psu_fan_fix1.jpg)
+
 Because it's hard to mount fans on the outside of a case, I duct-taped them to the case to keep them from moving. And because one of the fans was making a grinding sound because of the way I taped it, I had to use some cardboard to correct the position so it wouldn't make the annoying noise anymore. 
+
+![PSU fan fix](/assets/psu_fan_fix2.jpg)
 
 So it's a very inelegant solution that gets the job done. I could call this a temporary fix, or a hotfix, but there have been many of these so-called temporary fixes I've implemented that end up becoming permanent. This isn't really ideal, and to apply this to coding, sometimes a hack-y patch on top of bad code can fix a problem temporarily, but it makes maintainability and extensibility difficult. But sometimes, you really need to fix something then and there. Then you can refactor it later... or in all likelihood, just leave it as is. This is a bad practice that I try to avoid with my coding, but it admittedly happens every now and then.
 
