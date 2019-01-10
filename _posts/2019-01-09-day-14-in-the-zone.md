@@ -18,7 +18,7 @@ When you finally get in the zone for programming, even if it's only for a few ho
 
 Thne it's late, and you're still in the zone, and you don't want to leave, because you know even 15 minutes of coding in the zone can be more productive than the first hour of the next day because you'll have to reorient yourself and remember all of what you were doing and everything you need to consider. 
 
-## Music
+## How music helps programming
 
 Some people might think of music as entertainment or a distraction, but I personally find music to be a helpful tool to help me pace myself and also get in the zone, tuning out background noises and other thoughts. When you're thinking about music and programming, there isn't room for much else to go on. Music can also change your emotional state, based on what kind of music it is. 
 
@@ -26,4 +26,89 @@ Some music is very demanding of your attention, with lyrics that make you think 
 
 Basically, background music, like from soundtracks, or just music that otherwise doesn't have any singing/lyrics, actually bolsters my programming ability and concentration, so long as it isn't too intense. 
 
-There are really two categories of music I listen to: music for active listening, and music for passive listening. Active listening distracts you and gets you to fully concentrate on the music. This is good for concerts or leisure, but not so great for getting work done. On the other hand, passive listening music might seem less interesting when you're doing absolutely nothing else and only focusing on the music, but it helps as a background element when you're focusing on something else.
+There are really two categories of music I listen to: music for active listening, and music for passive listening. Active listening distracts you and gets you to fully concentrate on the music. This is good for concerts or leisure, but not so great for getting work done. On the other hand, passive listening music might seem less interesting when you're doing absolutely nothing else and only focusing on the music, but it helps as a background element when you're focusing on something else, such as programming.
+
+## osTicket, Bitnami, and MySQL databases
+
+I still haven't fixed osticket just yet, but I did manage to combine a few online tutorials to come up with this list of commands for an initial setup on Bitnami, this time using a different Bitnami LAMP 5.6 stack instead of the 7.1 version I was using before:
+
+```
+cd /opt/bitnami/apache2/htdocs
+git clone https://github.com/osTicket/osTicket
+cd osTicket
+php manage.php deploy --setup /opt/bitnami/apache2/htdocs/osTicket/
+cp include/ost-sampleconfig.php include/ost-config.php
+chmod 0666 include/ost-config.php
+mysql -u root -p
+```
+(then you're prompted for the password that is on the bitnami login banner, which is randomly-generated and looks like gibberish... if you need to see it again, log out and back in to the bitnami VM to see it again)
+Here is an example of the randomly-generated password to look for: https://docs.bitnami.com/images/img/platforms/virtual-machine/app-credentials.png
+Then in mysql, do the following:
+```
+CREATE DATABASE osticket;
+GRANT ALL PRIVILEGES ON osticket.* TO 'osticketuser'@'localhost' IDENTIFIED BY 'YOURNEWDATABASEPASSWORDGOESHERE';
+FLUSH PRIVILEGES;
+exit;
+```
+Then back to the web interface and set up the osTicket installation with the database info you just entered above.
+Then finally:
+```
+chmod 0644 include/ost-config.php
+```
+
+This sequence of steps helped me get farther than the problem I was stuck on previously, but osTicket still has some issues even when doing the above stuff. For example, you can submit a new ticket, but you can't log in to see it. I can't even log in with the admin account I used to set it up. I'm not sure what the problem is, but I posted about it on their forum and I will try and make more progress tomorrow.
+
+I'm not going to attempt to fix everything in a single day. But the important part is chipping away at a problem, slowly but surely, making at least a small amount of progress every single day. When you skip a day or two, it becomes out of sight, out of mind. Then you eventually give up. So I am working towards fixing this issue. I'm also learning more about PHP and MySQL, which I should really learn more about in-depth anyway, because of how ubiquitous they are. 
+
+Admittedly, some of the issues I'm having with osTicket might be because of issues specific to the Bitnami implementation of the LAMP stack. The entire point of using a Bitnami VM is that it's a turnkey solution to let you get a LAMP web server up and running in mere minutes. But if the differences between a Bitnami config and a typical LAMP stack are problematic enough to the point that you need to delve deep and do a lot of troubleshooting and modifications in order to get your app to work within it, isn't that self-defeating? The only point of Bitnami is that it saves you time, but the issues I'm facing here have taken up quite a lot of time thus far. 
+
+I'm kind of thinking about giving up on Bitnami and just setting up a LAMP stack from scratch, with a regular distro like Debian or something. Then I'd learn more about LAMP anyway, instead of thinking of it as some magic stack that I can't interact with or set up myself.
+
+## Trendy modern tech stacks vs. big and uncool stuff with momentum
+
+It's all too easy to get into current trends about what's fashionable to develop for. MEAN stack has a cool sound to it, doesn't it? I did MEAN stack for my CS undergrad web development and databases class. As modern and cool as it is, I can't help but think that it's good to know LAMP as well. If, for nothing else, it will help me learn more about osTicket and web shells (since I'm learning about information security, and PHP shells are a common thing for sites with remote file inclusion vulnerabilities, or sites that let users customize the CMS theme by uploading PHP files, or sites that have unrestricted file upload vulnerabilities that let you inject PHP code in an image upload, for example).
+
+Someone I know got a job doing Django/Python development, but I don't think it's used everywhere, so I should know other things instead of putting all my eggs in one basket. Python is a nice and versatile language, but there are still plenty of legacy projects running PHP regardless. Facebook and Wordpress are still PHP-based, and while it's easy to dismiss them because of the numerous things you can complain about either of them, the fact of the matter is that plenty of people still use LAMP, whether people think it's cool or not.
+
+On the frontend side, it seems like new JavaScript frameworks come and go practically overnight. I've done some vanilla JS stuff and even some things with jQuery, but there are so many other JavaScript libraries and frameworks that I just can't keep up with it all. And why should I? By the time you invest the time and effort it takes to get familiar with someone, it's already deprecated. So sometimes it's best to go with technologies that have better "staying power" rather than things that are here right now but might not have much longevity. 
+
+Nobody thinks Java or PHP are cool, but they are still widely used. I think it's good to learn languages that are hireable, even if you don't like them. I use plenty of different operating systems even if I don't like them all equally, but I know that there will be cases where I either have to develop for it, or support someone who is having an issue with a particular OS. So right now I use Windows 10 and Ubuntu on my desktop, Debian and Ubuntu and CloudLinux on my servers, macOS on my laptop, and iOS and Android on tablets and phones. You need to learn all the widely-used stuff, whether it's a programming language, OS, IDE, or whatever. Getting into obscure niches won't help you. 
+
+## PHP on shared servers
+
+Namecheap servers run a special data center-oriented Linux distro called CloudLinux. They have cPanel and Softaculous installed within them, and they typically run LAMP stuff, but now they've branched out and have support for Node and Python stuff too (though I haven't done that on Namecheap just yet). But one interesting tool in Namecheap's cPanel web dashboard is that you can choose which version of PHP your server runs. This will affect every website you have running on that server. In my case, I have a few Wordpress sites, as well as some sites I've written from scratch.
+
+Because of news about PHP 5.6 no longer getting security support, I decided to upgrade my PHP version.
+
+## The rift between PHP 5.6 and PHP 7.X
+
+Therre is significant fragmentation in PHP, remniscient of Android or Python 2.7 vs 3.X. Some legacy stuff refuses to be updated, despite all the warnings about potential hacking when the security support is discontinued. It's weird to think that you can get hacked because your *programming language* has vulnerabilities rather than your code within it, but that's the case here. It's also the case for old versions of Python that use outdated urllib stuff. Anything over a network needs updates and support. 
+
+When Python made big changes from 2 to 3, you needed to make some changes in order to support the newer version, or so I've heard. I only started using Python 3, so I never dealt with whatever differences were in Python 2. But many people are naturally change-averse, and didn't want to embrace the new version and its syntactic sugar and whatnot. But over time, it really made sense to jump ship, even if you weren't the biggest fan. Differences in syntax are one thing, but security is always important, and that will take precedent over pretty much everything else.
+
+Android is another fragmentation offender. So many phones never get updates, so what we end up with is people using old versions of the phone OS that can't handle the latest SDK versions, so it makes sense for developers to intentionally limit their development to older API levels in order to ensure that their apps can run on as many devices as possible. I might not like some of Apple's decisions, but at least they get updates right. Fragmentation is never a good thing.
+
+## Wordpress works on PHP 7.2, but not 7.3
+
+When I upgraded my servers from 5.6 to 7.0, Wordpress gave me warning messages about how PHP 7.0 isn't secure and that I need to update it. So within cPanel on my CloudLinux Namecheap server, I used the PHP version selector tool to update to PHP 7.3. I hit save and thought nothing of it for a while.
+
+Then I got an email from Jetpack Monitor notifying me that my site was down. So I checked it out myself, and sure enough, neither of my Wordpress sites on that server were accessible anymore. I got 500 internal server errors. 
+
+So I downgraded to PHP 7.2 and now it works just fine.
+
+## Wordpress updates and why I dislike CMSes
+
+The reason why I'm learning Python and making plans for a static site generator is that, let's face it, CMSes like Wordpress can be annoying. You have to update Wordpress itself, the themes, the plugins, and the underlying server software. But if you update PHP to the newest version, it can break your site. So you have to tread carefully, and there is an awful lot of maintenance required, if you're not doing some sort of managed WP hosting. There are lots of security issues that can arise with Wordpress, not just with Wordpress itself, but sometimes plugins can be insecure or even malicious. All this for essentially static content is a waste. 
+
+That's where static site generators like Jekyll come into play. But my experiences with Jekyll (what this website is currently using as of the time of writing this (but maybe not after that)) have been less than stellar. It's okay once you get it up and running, but it has weird dependency issues and is overly-complicated for something that is billed as an alternative to making your own site from scratch. 
+
+My annoying experiences with Wordpress, PHP, and Jekyll/Ruby are precisely why I am dedicated to making this Python static site generator. I will use no extra dependencies aside from Python and Qt. I will only use the Python standard library to achieve all of this. This way, all you have to install is Python, and it should work on Windows, macOS, and Linux, without any platform-specific modifications. 
+
+## cPanel 2FA
+
+I enabled 2-factor authentication on one of my 2 public-facing web servers. I had 2FA on the other one already. Now both of my online web servers are properly secure. My ESXi hypervisor is not publicly available on the internet though. I don't think it'd be wise to put a PHP 5.6 server on the internet in this day and age, even if osTicket requires it.
+
+## More Python exercises
+
+I really like the Python Crash Course book, because unlike other books I've read about programming, it gives you short and easy exercises to complete after every new concept it covers. In one Java textbook I had during my freshman year, it featured huge projects for the user to complete, which weren't assigned for homework, so I just never did any of them. They were too demanding of your time. Meanwhile, another entry-level Python book I read didn't really have you doing much at all. Python Crash Course's exercises are good because they demonstrate concepts but don't take too long to complete.
+
