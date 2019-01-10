@@ -8,7 +8,7 @@ date:   2019-01-10 0:24:39 -0600
 
 If you're using DHCP, it can difficult to find servers, unless they are constantly broadcasting their availability. A network I use in my LAN has device drivers for clients that will try and find a network printer that is constantly making its presence known. If you use Wireshark, you will see all the broadcast traffic, which is okay in a small network, but at scale, you can't have everything broadcasting availability to the entire subnet without getting broadcast storms. That's why network segmentation is useful instead of only having a flat network topology. 
 
-But anyway, if you set a bookmark in your browser for a certain local server, and then, for whatever reason, it gets turned off and its IP lease expires, it can get assigned some different address instead when it requests a new address after being put back online. This can make it hard to take inventory and really know all of your assets or where they are. Luckily, routers and/or DHCP servers make it easy to view a table of all DHCP clients, with their lease information, but 
+But anyway, if you set a bookmark in your browser for a certain local server, and then, for whatever reason, it gets turned off and its IP lease expires, it can get assigned some different address instead when it requests a new address after being put back online. This can make it hard to take inventory and really know all of your assets or where they are. Luckily, routers and/or DHCP servers make it easy to view a table of all DHCP clients, with their lease information, but it's easier to just create static DHCP reservations so that your servers will always have the same internal IP addresses (regardless of NAT or whatever for your WAN setup).
 
 ## Windows DHCP Remote Code Execution Vulnerability
 
@@ -49,3 +49,14 @@ As much as I like to talk about privacy, Google Analytics is really nice in a lo
 ## More osTicket stuff: error logs from Apache and PHP
 
 I'm still trying to get osticket sorted out. 
+
+## Slow progress on Windows Server project
+
+I want to take a break from doing non-coding tech projects and concentrate more on coding for a while. So for now, the free computer/Windows Server/Active directory stuff is on hold while I do more programming. After all, it's called #100daysofcode, not #100daysofrandomtechstuff.
+
+## KVM
+
+I set up a KVM so that I can use my single mouse and keyboard to control multiple devices. KVM stands for Keyboard, Video and Mouse. Right now, it's just hooked up to my desktop and the on-hold server project. I would have hooked it up to my hypervisor as well, but the hypervisor only has onboard HDMI, and my cheap KVM only has VGA cables for video. Besides, the hypervisor is mostly controlled through the web interface anyway.
+
+I also have some cables so I can use it with my macbook if I really want to, though macOS seems better geared towards touchpad usage instead of a mouse. 
+
