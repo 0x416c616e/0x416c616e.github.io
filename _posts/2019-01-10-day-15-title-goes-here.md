@@ -1,7 +1,7 @@
 ---
 layout: "post"
-title: "Day 14: In The Zone"
-date:   2019-01-10 8:23:04 -0600
+title: "Day 15: Title Goes Here"
+date:   2019-01-10 0:24:39 -0600
 ---
 
 ## Static DHCP reservations for servers
