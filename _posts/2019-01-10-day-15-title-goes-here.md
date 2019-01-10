@@ -26,6 +26,26 @@ I needed to set up an account for myself on a file server.
 
 ## No pulse width modulation? No problem!
 
-My... let's say... *creative* PSU fan noise solution has presented one challenge: the Tindie DC fan header board I bought is really simply and thus doesn't support pulse width modulation. But then again, neither do my 3-pin Cooler Master fans. So with no extra fan controller and no PWM control, the fans are at 100% speed, which is high CFM, but too high dB for my personal preferences. I looked in an old box of computer cables I had and came across a Noctua fan resistor cable. It didn't list the resistance on the side, but it did say the model number. So I looked up some specifications online and found out that it's about 150Ω. The problem with this particular fan resistor cable is that it slows my 120mm fans down way too much, to the point that the airflow CFM is next to nothing. 
+![](/assets/resistor_cables.jpg)
 
-So I looked online and found some 50Ω cables instead. With only a third of the resistance, it should let the fans spin much faster, but still slightly less than what they're currently at (full blast). 
+My, let's say, *creative* PSU fan noise solution has presented one challenge: the Tindie DC fan header board I bought is really simply and thus doesn't support pulse width modulation. But then again, neither do my 3-pin Cooler Master fans. So with no extra fan controller and no PWM control, the fans are at 100% speed, which is high CFM, but too high dB for my personal preferences. I looked in an old box of computer cables I had and came across a Noctua fan resistor cable. It didn't list the resistance on the side, but it did say the model number. So I looked up some specifications online and found out that it's about 150Ω. The problem with this particular fan resistor cable is that it slows my 120mm fans down way too much, to the point that the airflow CFM is next to nothing. 
+
+So I looked online and found some 50Ω 3-pin fan resistor cables instead. With only a third of the resistance, it should let the fans spin much faster, but still slightly less than what they're currently at (full blast). 
+
+## Python
+
+Continued to learn more about Python.
+
+## Jekyll Pagination and Disqus Comments
+
+There are too many posts on my site on a single page, rather than breaking things up into multiple pages. I want to change that. I haven't really customized much about Jekyll yet, aside from adding a favicon, which was surprisingly complicated for such a simple feature that is actually much easier when writing a site from scratch.
+
+My other website, [Saint Louis Software](https://saintlouissoftware.com), already uses Disqus for comments on articles and project pages. However, I set up a lot of that site in a really inefficient manual way rather than automating repetitious things. It wasn't made with a static site generation tool like this site was. 
+
+## Google Analytics
+
+As much as I like to talk about privacy, Google Analytics is really nice in a lot of ways. I use it on all my Wordpress sites, as well as my Saint Louis Software site. I'm going to add it to this site too to learn more about traffic stats. Because this particular site is hosted on Github Pages, you can't see any server stats the way you can with a LAMP server and something like awstats. awstats might be inaccurate, but it's still a way to learn about site traffic even when you don't have Google Analytics. But I have absolutely no way of seeing server logs here unless I add Google Analytics.
+
+## More osTicket stuff: error logs from Apache and PHP
+
+I'm still trying to get osticket sorted out. 
