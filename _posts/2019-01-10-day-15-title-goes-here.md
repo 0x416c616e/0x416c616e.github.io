@@ -38,6 +38,8 @@ Continued to learn more about Python. Aside from Python Crash Course, I am also 
 
 The Python Crash Course book and this Udemy course are structured a little differently, so I pick up on bits and pieces from each course and they cover different things that the other doesn't have. It's interesting to do it with multiple perspectives about what's important in this language. 
 
+One particularly interesting concept I learned recently is \*args and \*\*kwargs in Python. \*args is for tuples of any length, and \*\*kwargs is for dictionarys of any length. The point of both of these things is that you can accept an arbitrary number of arguments.
+
 I am getting closer to feeling more confident in my ability to write at least a command-line static site generator, even if I don't have the Qt GUI framework know-how for the visual frontend compoenents just yet. But that will come later.
 
 ## Jekyll Pagination and Disqus Comments
@@ -76,4 +78,12 @@ I've accidentally come across some repositories where people put private credent
 **So what does this mean for me?**
 
 It means I might be able to create issues or pull requests telling people to remove this sensitive login information from their repos, and also include some basic steps for how they can do it.
+
+## Next project idea
+
+Should my next project after the static site generator be to make a Python/Django ticketing system? Since I've had a lot of trouble with osTicket, maybe I should just make my own ticketing system. It's just like how I didn't like a lot of things about Jekyll and that's why I'm making my own site generator. 
+
+## Healthcare paperwork
+
+Spent an inordinate amount of time on healthcare paperwork today. The healthcare stuff I might do in the near future might put this #100daysofcode thing on hiatus. Health is a little more important than having an uninterrupted coding streak of 100 days.
 
