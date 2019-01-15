@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 15: Resuming"
+title: "Day 16: Resuming"
 date:   2019-01-14 3:42:36 -0600
 ---
 
@@ -45,3 +45,12 @@ I will also make it so that it re-generates the pages every time because the ord
 ![static generator screenshot 5](/assets/static_generator_screenshot5.PNG)
 
 I am eventually going to migrate this site over to my static site generator once it's in more of a working state. That should motivate me to work on it and improve it. 
+
+## More Python stuff
+
+In addition to some basic Python learning classes, I am starting an online self-paced Udemy course that teaches Python GUI applications through Qt. I had to set up Python again with pip and the path variable for it, and now I am currently setting up PySide2, but it has numerous dependencies I need to download and set up first, including Qt 5.12, which is about 3GB, libclang, pip, and CMake. 
+
+![](/assets/pyside2.PNG)
+
+The Python/Qt course is a little more advanced than the easier Python tutorials/classes I've been doing so far, and unfortunately the person who made it was using PySide 1 and Python 2.7, so it will be a little hard to follow along. In fact, I'm not sure I'll be able to at this point. I might end up changing to some other GUI option for Python, but in any case, I still want to add GUI functionality to my Python static site generator. 
+
