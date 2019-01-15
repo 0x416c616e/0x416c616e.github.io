@@ -46,7 +46,7 @@ So to anyone who is wondering about being self-taught as opposed to going to col
 
 ## Beginners and experts
 
-I don't remember who said this, but I remmeber someone saying that you should never get into the mindset of thinking you're an expert on something. You might have years of experience in a field and advanced degrees to show for it, but being a self-proclaimed expert means you're past the point of being open to learning new things, and might even think you're too good to learn new stuff, or have some sort of cognitive dissonance about why you don't want or need to learn new things. By contrast, someone who considers themselves to be a beginner will be curious to learn new things, and will be much more okay with admitting that they don't know everything. So a person who thinks like a beginner will be better able to learn and adapt to new things, such as new programming languages and tech that comes out. 
+I don't remember who said this, but I remember someone saying that you should never get into the mindset of thinking you're an expert on something. You might have years of experience in a field and advanced degrees to show for it, but being a self-proclaimed expert means you're past the point of being open to learning new things, and might even think you're too good to learn new stuff, or have some sort of cognitive dissonance about why you don't want or need to learn new things. By contrast, someone who considers themselves to be a beginner will be curious to learn new things, and will be much more okay with admitting that they don't know everything. So a person who thinks like a beginner will be better able to learn and adapt to new things, such as new programming languages and tech that comes out. 
 
 ## How to avoid becoming obsolete
 
