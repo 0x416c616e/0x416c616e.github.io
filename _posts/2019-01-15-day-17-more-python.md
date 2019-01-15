@@ -82,6 +82,8 @@ Still doing more Python learning. Pretty simply stuff, but it's still something.
 
 ## Backburner project: SQL
 
+![]()
+
 Even though my Lamp 7.1 VM wasn't useful for osTicket (and I will probably just not use osTicket at all!), I still had the 7.1 VM on my hypervisor, just turned off and not really doing anything. Well I've decided that I should use it for the SQL in 10 Minutes book I'm reading, because the book contains some exercises and files and whatnot. But you need to have a database and DBMS in order to use it, so you can make tables and rows and all that jazz. 
 
 Now that I have an easy-to-use virtual machine that already has MySQL set up, I'm going to follow along and do some more database-related stuff.
@@ -95,3 +97,66 @@ But as cool and modern as these things may seem, it still seems important to lea
 They both have their own issues. MongoDB has host binding issues, where it can be easy to accidentally let your database be public, and SQL has SQL injection, which is older than I am, but is still a problem to this day. I once did a SQL injection workshop at SIUE, and it was fun because I actually managed to inject JavaScript into a database row, which was a little bit beyond the scope of what the project was supposed to be about. I made it so that viewing a web page would run JavaScript that was being retrieved from what I injected into the database. 
 
 But yeah, databases (and database management systems) are important, and I will be learning more about them in the future. 
+
+## WAMP and MySQL Workbench
+
+![Bitnami WAMP screenshot](/assets/wamp1.PNG)
+
+The PDF for the book exercises instead recommends using MySQL and the MySQL workbench program, so I am actually setting this up with WAMP within Windows, locally, on my desktop. The instructions included text files full of SQL queries to populate the otherwise blank database they had you make. It's not real data for any useful application, it's all just made up for demonstration/learning purposes, going by the SQL book.
+
+![](/assets/mysql_workbench1.PNG)
+
+I followed the instructions in the PDF that was mentioned in the link in the book Teach Yourself SQL in 10 Minutes. There were a couple issues with the instructions, but I figured it out anyway.
+
+![](/assets/mysql_workbench2.PNG)
+
+Here, you can see the dummy data that the book wants you to use in order to follow some exercises to learn about SQL.
+
+![](/assets/mysql_workbench3.PNG)
+
+
+## Data structures and types
+
+I decided to review some data structures I already know, as well as learning some new ones. I looked up info on graphs, maps, hashmaps, generics, and trees. I've also been learning things Python uses, like dictionaries, tuples, and lists. 
+
+## Other random learning
+
+Did a refresher on modal view controller architecture, extract-transform-load, entity-relationship models, design patterns, ajax, create-read-update-delete, Python standard library, Python modules (especially the os and sys modules), regular expression, if \__name__ == '\__main__', sys.argv command line arguments, Python file IO, etc.
+
+## Simple text-based Python RPG
+
+I said the IT ticketing system would be my next big project after I finish my static site generator, but I'm thinking that I should do something more limited in scope first, that also demonstrates a lot of concepts that I haven't really used much in the static site genreator. I don't actually any play video games, but I have made a couple. I've made a 2D RPG in Java, though because I made it before I started using version control, my IDE somehow deleted some important files in it and it doesn't work anymore. It would require a lot of changes to fix. Another game I made was a self-playing text-based RPG in C++, which would log statistics to a CSV file so you could view information about what happened after the fact. Opening the CSV in Excel would show you a graph. But that's getting a little off-topic now.
+
+RPGs are a good example that would require things like classes, subclasses, inheritence, polymorphism, objects, control flow, variables, globals, user input, file IO, error handling, etc. The static site generator is good, but can really just be a single Python file and has a lot of while loops and performs file IO. Not much else to it. I guess it also involves some HTML and CSS and even JavaScript, but it's not a really great way to incorporate a lot of the features of Python, so I want to do that before moving onto a really daunting project like a full stack web app IT ticketing system.
+
+The best way to learn a programming language is to learn experientially but also iteratively. Your first app in a language should not be super complicated. You work your way up from smaller projects and eventually increase complexity. If you start too big to begin with, you're destined to fail. 
+
+## Yes, I really do need 32GB of RAM (for VMs and more)
+
+![](/assets/booting_vm_resource_usage.PNG)
+
+A couple days ago, I decided to make an Ubuntu VM, running locally on my desktop as opposed to on my hypervisor, which might not have been the best decision. I decided not to put it on my boot SSD, because it has limited capacity and it's just a slow-ish SATA III SSD anyway, as opposed to the faster NVMe M.2 drive on my mini-ITX hypervisor. But I thought a WD blue would be sufficient for a VM. I guess it technically works, but booting is painfully slow. 
+
+The point of me making the VM was to get more experience with Linux again. I started using Ubuntu and Debian over a decade ago, but I haven't used it as my daily driver OS in a few years. I have a MacBook running macOS, and my desktop runs Windows 10 natively, though now with different VMs for various things. 
+
+Because I write web, Java, and Python software, I want to be able to properly test my programs and websites on many different platforms. I can simply install the dependencies, like JDK, and other stuff like Python comes with Linux anyway. 
+
+But it's not just that the hard drive is slow. My settings for the VM make it even slower. By default, it was only given access to 1 CPU core and 1GB of RAM.
+
+VM CPU and RAM settings haven't been an issue for my non-graphical VMs on my hypervisor, even with extremely limited resources allocated to them, simply becaues they are command line only, not running any sort of desktop environment. Because my local VM has the default Ubuntu DE, it requires a lot more power. One big limitation I can't change though is that it's using a Virtualbox virtualized graphics card rather than a real one. I guess I could do a hardware pass-through, but that's too involved for me, and all it really needs is more sufficient CPU and RAM usage rather than a GPU. It might have even been dipping into swap, which would have explained the higher disk usage. Should've checked with htop before I changed it, but oh well.
+
+![](/assets/vm_cpu_setting.PNG)
+
+Now I've changed it to 2 CPU cores and 4GB of RAM. I have 32GB of RAM and only use around half of it most of the time, so I can afford to use a little more if it means my Ubuntu VM will be snappier.
+
+![](/assets/resource_usage_after_vm_change.PNG)
+
+After changing the VM settings and rebooting, it boots up noticeably faster now, and it's far more performant, though still nowhere near as fast as a native OS installation. 
+
+![](/assets/ubuntu_vm_neofetch.PNG)
+
+Now I can test things on macOS Mojave, Windows 10, and Ubuntu 18.04 LTS -- with decent performance on all three, too. I used to have a Windows 10 VM on my MacBook, but it was sluggish and increased resoruce usage and temperature to an unacceptable degree. My MacBook is slower and has less RAM and disk space than my desktop. Resources are cheaper in a desktop than in a laptop, and cooling is better with larger heatsinks and fans in a desktop too. So virtualization really isn't great on something compact and expensive like a laptop. Getting a higher-performance laptop would cost more than my desktop and laptop combined, so that's not really a good solution.
+
+That all being said, I encountered some issues with being able to install the correct version of Java to run my Java 8 JAR file. Just like how there's a difference between PHP 5.6 and PHP 7.X, and there's a difference between Python 2.7 and Python 3.X, there is also a difference in compatibility between Java 8 and Java 11. My projects are made with JavaFX, which comes with Java 8 by default, but it got removed in Java 11 for some reason. Not really sure why. So I can either figure out how to set up JavaFX externally, or just use Java 8.
+
+But as it turns out, installing Java 8 in Ubuntu is a little tricky. I will look into it later, but not now.
