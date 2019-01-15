@@ -64,9 +64,19 @@ One example of this issue is Ruby. It used to be hugely popular for web developm
 
 Watched a half hour video about JSON again, because I'm planning on using JSON for my static site generator. I learned it in the past, but it's been a while. A lot of my tech skils are like that -- I knew a lot about it at one point, but because I haven't used it recently, I've forgotten some things about it. It takes less time to re-learn compared to learning something for the first time, but it can still take a little while to get back into the swing of things.
 
+## Static site generator
+
+![](/assets/ssg_text_menu.PNG)
+
 My idea for my static site generator, at least for right now, is to get user input to make articles. It will use the input() function to get user input for things like the title, date, file name of the leading image, first paragraph, and remainder of the post body text. This will then be stored as JSON as an article file, and there might also be a config file somewhere. 
 
 I'm thinking I will have a single Python script that prompts the user to select options from a menu (text-based for now), so you can create a new project, open an existing project, create a new post, view existing posts, edit an existing post, delete an existing post, change site info (such as author name, social media links, and the static about page), etc. Then there will also be a function to regenerate the static pages. 
 
 This static site generator can be used in conjunction with git and GitHub Pages in order to make a static site. Once I have a working text-based version, I will replace this Jekyll site with my own statically-generated site. The content will be the same, but the layout will be different.
+
+## More Python
+
+![Python learning screenshot](/assets/python_learning123.PNG)
+
+Still doing more Python learning. Pretty simply stuff, but it's still something.
 
