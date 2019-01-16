@@ -86,7 +86,7 @@ And here, I've learned how to read JSON from a file and store it as a dictionary
 
 ![](/assets/ssg_text_menu.PNG)
 
-My idea for my static site generator, at least for right now, is to get user input to make articles. It will use the input() function to get user input for things like the title, date, file name of the leading image, first paragraph, and remainder of the post body text. This will then be stored as JSON as an article file, and there might also be a config file somewhere. 
+My idea for my static site generator, at least for right now, is to get user input to make articles. It will use the ```input()``` function to get user input for things like the title, date, file name of the leading image, first paragraph, and remainder of the post body text. This will then be stored as JSON as an article file, and there might also be a config file somewhere. 
 
 I'm thinking I will have a single Python script that prompts the user to select options from a menu (text-based for now), so you can create a new project, open an existing project, create a new post, view existing posts, edit an existing post, delete an existing post, change site info (such as author name, social media links, and the static about page), etc. Then there will also be a function to regenerate the static pages. 
 
@@ -139,7 +139,7 @@ I decided to review some data structures I already know, as well as learning som
 
 ## Other random learning
 
-Did a refresher on modal view controller architecture, extract-transform-load, entity-relationship models, design patterns, ajax, create-read-update-delete, Python standard library, Python modules (especially the os and sys modules), regular expression, if \__name__ == '\__main__', sys.argv command line arguments, Python file IO, JSON in Python, database normalization, git branching and merging, etc.
+Did a refresher on modal view controller architecture, extract-transform-load, entity-relationship models, design patterns, ajax, create-read-update-delete, Python standard library, Python modules (especially the os and sys modules), regular expression, if ```__name__ == '__main__'```, sys.argv command line arguments, Python file IO, JSON in Python, database normalization, git branching and merging, etc.
 
 ## Simple text-based Python RPG
 
@@ -190,3 +190,83 @@ So far, at least one person has told me that my writing contains too many techni
 But there's a fine line between being easy to understand and being condescending. If I explain too many things about programming or computer science, and it turns out the person I'm explaining it to already knows the subject, they might think that I don't think too highly of their intelligence. So I generally try to give people the benefit of the doubt and realize that if someone is reading a programming-related blog, they at least know some basic concepts related to programming.
 
 Come to think of it, I haven't put that much thought into documentation yet. I've done some code comments here and there, but never any proper documentation, like a wiki or something. Sure, I write the occasional blurb in a git repo readme, but that's not very fully-fledged. Reading about documentation is something I should do more of. After all, if you expect anyone to actually use your software, you have to help people understand what it is, how it works, and how to use it. Documentation fills that role. But the same issues comes up -- explain too much and people are bored with how you're taking too much time to explain basic concepts they already know and don't want to waste time on. Explain too little and people will be lost and frustrated. It can be hard to get the right balance. 
+
+## SQL basics and SELECT statements
+
+![](/assets/mysql_select_example.PNG)
+
+I finished the second chapter in *SQL in 10 Minutes*, which went over ```SELECT``` statements.
+
+![](/assets/mysql_select_all.PNG)
+
+I not only followed the book example that requires the setup and dummy data, but I also googled how to list all tables in the database, because I actually forgot which ones I set up using the copied and pasted instructions text files that contained premade SQL queries for creating and populating a learning-oriented MySQL database (or rather, a relational database that uses MySQL as its DBMS). 
+
+![phpMyAdmin](/assets/phpMyAdmin1.PNG)
+
+I also forgot that I took a screenshot of phpMyAdmin earlier today, because that comes bundled with the Bitnami WAMP stack, which is just an executable that runs a local server as opposed to a fully-fledged VM. Though I had some issues with the VMs so I scrapped that idea in favor of just local-only stuff. But in any case, the database I made with the MySQL Workbench is viewable and usable even through the web-based phpMyAdmin interface, though I am sticking with the Workbench program because that's what the book covers. But it demonstrates that you can use numerous things with the same relational database, assuming you have the right login credentials for it. I actually had to set up a root password and then stored it in my password manager, though because I didn't make any exceptions for my Windows firewall, it isn't even accessible on a LAN, let alone WAN.
+
+I might be an amateur, but I am already aware that databse security is hugely important. For these learning exercises, I can only do stuff locally. And my IT ticketing system will only be intended for LANs rather than an internet-facing system. I will try my best to secure stuff, and maybe even use Kali/Metasploit to do some pentesting on my own web app, or maybe just use a web application firewall on top to secure it, though that's admittedly kind of like a bandaid on top of bad code.
+
+You can also SELECT multiple columns at the same time. For example:
+
+```SQL
+SELECT prod_id, prod_name, prod_price
+FROM Products;
+```
+
+There are also wildcards:
+
+```SQL
+SELECT *
+FROM Products;
+```
+
+And if there are duplicate results, you can use DISTINCT to only return the unique values:
+
+```SQL
+USE tysql;
+SELECT DISTINCT vend_id
+FROM Products;
+```
+
+Also, the USE keyword specifies which databse to use. In this case, the book had me make a database called tysql. It has to be named something. 
+
+You can also limit how many results to return, like so:
+
+```SQL
+SELECT prod_name
+FROM Products
+LIMIT 5;
+```
+
+In addition to limiting, you can also OFFSET:
+
+```SQL
+SELECT prod_name
+FROM Products
+LIMIT 5 OFFSET 5;
+```
+
+This reminds me of shell utilities like ```head``` and ```tail```.  But keep in mind that ```OFFSET``` here means where you start. ```OFFSET 1``` means start at the second row, because you start counting with 0 for SQL records/rows.
+
+![](/assets/valid_sql_comment.PNG)
+
+And finally, the end concept in this chapter: SQL comments. Just like any other language, you want to be able to add brief documentation that lets people (or even you!) understand what it is you're trying to accomplish. I can't tell you the number of times I didn't properly comment my code, took a break from the project for a while, and then came back weeks or months later only to be completely confused as to what my code actually did or why I designed it that way. A short comment here and there does wonders for maintainability and extensibility. 
+
+![](/assets/invalid_sql_comment.PNG)
+
+Be sure you do it right though. They need spaces before the double dashes!
+
+```SQL
+# this is also a SQL comment... sometimes!
+```
+
+There's also another kind of comment, but it isn't always valid. Something that might work in one DBMS might not work in another. SQL is vendor-neutral, but specific DBMSes might add their own custom features on top of SQL, which might not be necessary. You know how Android phones sometimes have manufacturer-customized ROMs, but they're more or less all Android (but with slight tweaks)? It's kind of like that. 
+
+```SQL
+/* And here is a mult-line comment
+which isn't that different from Java*/
+```
+
+This book is good, but the "10 minutes a day" think is really misleading! If you want to really learn what the book covers, it'll take a lot more time than that. But that's all for today. Check back again tomorrow for more programming, learning, and musings on programming!
+
