@@ -73,7 +73,7 @@ A lot of my older tech skills are like that. Cisco IOS isn't the hottest skill t
 
 ## Avoid the trap of buzzword-driven development
 
-While I did just ramble on about how outdated tech skills should be given up in favor of more relevant and hirable skills for things people currently use (which is a never-ending process, by the way), don't be the kind of developer who buys too much into short-lived fads based around cool-sounding buzzwords. It's good to know modern things, but don't follow it with a religious fervor. 
+While I did just ramble on about how outdated tech skills should be given up in favor of more relevant and hirable skills for things people currently use (which is a never-ending process, by the way), don't be the kind of developer who buys too much into short-lived fads based around cool-sounding buzzwords. It's good to know modern things, but don't follow it overzealously. 
 
 RESTful APIs are cool, but don't put them everywhere just because they sound cool and new. Machine learning and neural networks are also cool, but shoehorning them into a project where they don't below -- just so you can have more buzzwords for marketing -- doesn't make much sense. Cloud is good, but not everything should be in public, shared hypervisors. Hyperconverged infrastructure is a good concept, but don't obsess over it to the point of ignoring everything else. Containers and orchestration are cool concepts too, but sometimes you need to admit that a project really doesn't need it. Use the right tool for the right job. Don't try to cram all the newest buzzwords into a single project just becaues you can. Use things in moderation and where appropriate.
 
