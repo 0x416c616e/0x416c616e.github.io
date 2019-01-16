@@ -64,6 +64,24 @@ One example of this issue is Ruby. It used to be hugely popular for web developm
 
 Watched a half hour video about JSON again, because I'm planning on using JSON for my static site generator. I learned it in the past, but it's been a while. A lot of my tech skils are like that -- I knew a lot about it at one point, but because I haven't used it recently, I've forgotten some things about it. It takes less time to re-learn compared to learning something for the first time, but it can still take a little while to get back into the swing of things.
 
+**Update:** the first JSON video I watched went over the basics, but then it went into things related to web development, but I am specifically interested in using JSON with Python, at least for the time being for my current project. So I came across another video that was specifically for using JSON with Python -- writing JSON to a file, or reading JSON from a file and storing it as a dict. 
+
+Here's the video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kf0q4Tf5M3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Also, fun fact about the above video: video embedding isn't support in Markdown, and Jekyll posts are all Markdown. But apparently the Markdown preprocessor will ignore plain old HTML, so you can use a mixture of Markdown and HTML even though it's technically invalid Markdown in a .md file. But by the time you're reading this, Jekyll's regeneration feature will have generated an HTML version. But the point is that normal Markdown doesn't support HTML, but Jekyll's weird Markdown does.
+
+My static generator will only support plain text and HTML, not Markdown. And even though it will use JSON, the user typically won't have to deal with it directly. They will be prompted to enter in stuff. 
+
+![](/assets/write_json_to_file.PNG)
+
+In the above screenshot, I followed the video tutorial and learned how to write JSON to a file.
+
+![](/assets/read_json_from_file_and_convert_to_dict.PNG)
+
+And here, I've learned how to read JSON from a file and store it as a dictionary in Python. Read from and writing to files is important for the static site generator, and it will make extensive use of JSON. 
+
 ## Static site generator
 
 ![](/assets/ssg_text_menu.PNG)
@@ -121,7 +139,7 @@ I decided to review some data structures I already know, as well as learning som
 
 ## Other random learning
 
-Did a refresher on modal view controller architecture, extract-transform-load, entity-relationship models, design patterns, ajax, create-read-update-delete, Python standard library, Python modules (especially the os and sys modules), regular expression, if \__name__ == '\__main__', sys.argv command line arguments, Python file IO, etc.
+Did a refresher on modal view controller architecture, extract-transform-load, entity-relationship models, design patterns, ajax, create-read-update-delete, Python standard library, Python modules (especially the os and sys modules), regular expression, if \__name__ == '\__main__', sys.argv command line arguments, Python file IO, JSON in Python, database normalization, git branching and merging, etc.
 
 ## Simple text-based Python RPG
 
@@ -160,3 +178,15 @@ Now I can test things on macOS Mojave, Windows 10, and Ubuntu 18.04 LTS -- with 
 That all being said, I encountered some issues with being able to install the correct version of Java to run my Java 8 JAR file. Just like how there's a difference between PHP 5.6 and PHP 7.X, and there's a difference between Python 2.7 and Python 3.X, there is also a difference in compatibility between Java 8 and Java 11. My projects are made with JavaFX, which comes with Java 8 by default, but it got removed in Java 11 for some reason. Not really sure why. So I can either figure out how to set up JavaFX externally, or just use Java 8.
 
 But as it turns out, installing Java 8 in Ubuntu is a little tricky. I will look into it later, but not now.
+
+## Branching
+
+I still don't feel extremely comfortable with branching and merging, even though I've watched some videos on the subject. I taught myself git basics, and also used online self-directed/self-paced resources for learning Jekyll/GitHub Pages/git/GitHub itself. But for right now, I put everything on the master branch, which I know is bad. I will need to make better use of branching and merging in the future, which is what I am trying to do more of. my [gitUdemyLearning](https://github.com/0x416c616e/gitUdemyLearning) repository is where I test new git commands before using them in my "real" repos, and I write the commands and what they do in the README.md file. This is kind of like the Feynman Technique. Learn by doing and learn by teaching. If you can't explain it well to someone else, you probably don't understand it as well as you think you do. Writing these entries has been helpful in that regard, even if only a small number of people read them.
+
+## Jargon and readability
+
+So far, at least one person has told me that my writing contains too many technical terms and acronyms. I am not 100% sure who I am writing for, which I guess is bad. Am I expecting tech-savvy people to read this? Well I know at least one not-so-tech-savvy person reads this, so I will make a better effort to make it easier to understand.
+
+But there's a fine line between being easy to understand and being condescending. If I explain too many things about programming or computer science, and it turns out the person I'm explaining it to already knows the subject, they might think that I don't think too highly of their intelligence. So I generally try to give people the benefit of the doubt and realize that if someone is reading a programming-related blog, they at least know some basic concepts related to programming.
+
+Come to think of it, I haven't put that much thought into documentation yet. I've done some code comments here and there, but never any proper documentation, like a wiki or something. Sure, I write the occasional blurb in a git repo readme, but that's not very fully-fledged. Reading about documentation is something I should do more of. After all, if you expect anyone to actually use your software, you have to help people understand what it is, how it works, and how to use it. Documentation fills that role. But the same issues comes up -- explain too much and people are bored with how you're taking too much time to explain basic concepts they already know and don't want to waste time on. Explain too little and people will be lost and frustrated. It can be hard to get the right balance. 
