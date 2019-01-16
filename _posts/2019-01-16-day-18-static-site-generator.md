@@ -1,12 +1,8 @@
 ---
 layout: "post"
-title: "Day 18: Change This Name"
+title: "Day 18: Static Site Generator"
 date:   2019-01-16 9:13:12 -0600
 ---
-
-## Change the file name year!= in this file!
-
-It's 2018 when it should be 2019. I only did this temporarily because it won't show up otherwise. If you make a post with a future date, it won't show up until that date. I am starting on jan 16th's stuff before the 16th.
 
 ## We meet again
 
