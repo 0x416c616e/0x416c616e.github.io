@@ -28,12 +28,7 @@ I plan on finishing my static site generator (the command line version of it), a
 
 Now, I might encounter time-consuming issues with the above goals, and they are my top priority. But if I am able to finish those things with time to spare, here are some other things I want to do:
 
-1. Learn more about Python
-2. Learn more about git/GitHub
-3. *Maybe* convert the static site generator to a GUI format instead of having it be command line. That would involve learning tkinter for Python.
-4. Just one lesson of SQL in 10 Minutes.
-
-And that's it! If I try to do too many different things, I'll get distracted and end up not doing the above stuff.
+**UPDATE:** as it turns out, the static site generator still has a lot more progress to go before it's really finished. I havevn't even managed to finish the command line version of it, and I didn't even start on the GUI stuff yet. It might take me a few more days to finish even the command line version. Then I want to learn tkinter and make a GUI for it. But maybe the GUI version can be a separate python script, so that people can still use the command line version if they prefer. Some people prefer cli to GUI. And a CLI program can be used with another program to programmatically do something, like you make an app that uses the command line version to auto update a site, or something like that.
 
 ## Goal for a future day
 
@@ -74,4 +69,12 @@ While I did just ramble on about how outdated tech skills should be given up in 
 RESTful APIs are cool, but don't put them everywhere just because they sound cool and new. Machine learning and neural networks are also cool, but shoehorning them into a project where they don't below -- just so you can have more buzzwords for marketing -- doesn't make much sense. Cloud is good, but not everything should be in public, shared hypervisors. Hyperconverged infrastructure is a good concept, but don't obsess over it to the point of ignoring everything else. Containers and orchestration are cool concepts too, but sometimes you need to admit that a project really doesn't need it. Use the right tool for the right job. Don't try to cram all the newest buzzwords into a single project just becaues you can. Use things in moderation and where appropriate.
 
 This might sound hypocritical, considering my previous blog post mentioning how I will sometimes add an unnecessary feature into a personal project just so that I can learn it. But that's not what I'm referring to here. Sometimes you need to make semi-useless personal projects just to get experience with somethnig. But that kind of thing shouldn't happen for meaningful work-related projects, unless it'll never make it to production and you're just treating it as job training.
+
+## Other stuff I did today
+
+Fixed some issues in random repos, deleted and merged some useless repos (or ones with separate projects that can all be lumped into the same project for a single repo), opened new issues on projects so I won't forget what needs to change for them, archived some repos, etc. I basically cleaned up my GitHub profile so that you are more likely to see my good repos instead of just misc junk learning stuff. I have a lot of cool apps and websites on my GitHub account, but also some less-impressive educational repos. 
+
+## Take a look at my best software
+
+My top 6 pinned repos are just ones I want to work on (so they're not out of sight, out of mind), not my most impressive ones. I'd say my best repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior]https://github.com/0x416c616e/roadwarrior(), and [amp](https://github.com/0x416c616e/amp).
 
