@@ -78,3 +78,7 @@ Fixed some issues in random repos, deleted and merged some useless repos (or one
 
 My top 6 pinned repos are just ones I want to work on (so they're not out of sight, out of mind), not my most impressive ones. I'd say my best repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](https://github.com/0x416c616e/filehider), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior](https://github.com/0x416c616e/roadwarrior, and [amp](https://github.com/0x416c616e/amp).
 
+## Commit early and often
+
+I used to make very few git commits, and they were always massive updates. Now, I commit smaller and more frequent changes. It works out better this way. If you make an unwanted change and have to revert to a previous commit, you won't lose as much progress this way.
+
