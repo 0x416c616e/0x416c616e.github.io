@@ -76,5 +76,5 @@ Fixed some issues in random repos, deleted and merged some useless repos (or one
 
 ## Take a look at my best software
 
-My top 6 pinned repos are just ones I want to work on (so they're not out of sight, out of mind), not my most impressive ones. I'd say my best repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior]https://github.com/0x416c616e/roadwarrior(), and [amp](https://github.com/0x416c616e/amp).
+My top 6 pinned repos are just ones I want to work on (so they're not out of sight, out of mind), not my most impressive ones. I'd say my best repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](https://github.com/0x416c616e/filehider), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior](https://github.com/0x416c616e/roadwarrior, and [amp](https://github.com/0x416c616e/amp).
 

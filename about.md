@@ -16,6 +16,6 @@ This site is currently hosted on Github Pages. The git repo is available [here](
 
 ## Cool projects I've made
 
-Some of my current best public GitHub repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](https://github.com/0x416c616e/filehider), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior]https://github.com/0x416c616e/roadwarrior(), and [amp](https://github.com/0x416c616e/amp).
+Some of my current best public GitHub repos are [Saint Louis Software](https://github.com/0x416c616e/saintlouissoftware), [EZcrypt](https://github.com/0x416c616e/ezcrypt), [FileHider](https://github.com/0x416c616e/filehider), [Static Site Generator](https://github.com/0x416c616e/staticsitegenerator), [2D RPG Game Engine](https://github.com/0x416c616e/2drpggamengine), [Road Warrior](https://github.com/0x416c616e/roadwarrior), and [amp](https://github.com/0x416c616e/amp).
 
 This site is not affiliated with 100daysofcode.com.
