@@ -227,6 +227,44 @@ Anyway, here is an example of ordering data:
 
 ![](/assets/order_by_sql1.PNG)
 
+Also, you can sort by more than one column, like so:
+
+![](/assets/order_by_sql2.PNG)
+
+You can also refer to columns by their position instead of their name.
+
+```
+ORDER BY 4, 5
+```
+
+Please note that the above is not a full/valid SQL statement. A statement with the ORDER BY clause would also need a corresponding SELECT in front of it. It would also need to be ended with a semicolon. 
+
+Hitting enter after typing text at a mysql prompt, or in a SQL file such as in MySQL Workbench, will not be enough to run it. Some people like to space out SQL queries into multiple lines -- just for a single query. So the only way to designate the end of a query is with a semicolon. SQL actually ignores any and all whitespace. 
+
+Python forces indentation as a part of syntax. However, SQL is more flexible in that regard, and you can choose to use lowercase for statements and clauses (although all uppercase is recommended for readability), and some people prefer to break up a statement into its separate parts, all being on different lins. But you could just as easily write it all on a single line, if you prefer. However, it might not be considered best practice.
+
+So you learned basic sorting. But what does sorting mean? Sorting a list of strings would mean sorting them alphabetically by default. But maybe that's not what you want. Maybe you want reverse order instead of the regular order. Maybe you want descending prices instead of ascending ones. 
+
+Here is a piece of a SELECT statement, only concentrating on the ORDER BY clause, that uses descending order instead of ascending:
+
+```
+ORDER BY price DESC;
+```
+
+Descending is marked by the DESC keyword in SQL.
+
+If you want to sort multiple columns, they don't all have to be either ascending or descending. you can mix and match. Ascending is implicit, DESC has to be explicitly mentioned. DESCENDING is another keyword that does the same thing.
+
+You can also use ASC or ASCENDING, but it's already implied, so why bother? Maybe for readability, but it is completely unnecessary.
+
+That's all for SQL for now.
+
+
+
+
+
+
+
 ## Pseudo-languages
 
 There are some pseudo-languages I have to learn, like regular expression and SQL. They are very different from general purpose languages like Python or Java, but still languages nonetheless. You really understand what general purpose means once you get more into specialized things that can only do certain things. I guess sed and awk are also kind of like that, for pattern matching and whatnot.
