@@ -66,6 +66,16 @@ Here is the unfinished project structure for sites made with SSG, by the way:
 
 All the files and directories will be copied to a new folder in the projects directory. Notice how these are all in the "templates" folder, because these are the base template files that are used to build the project. There are some working-project files that aren't what you will put on your website. The only files you will end up copying over to your server (or commiting in git) are in the website_files directory. Everything else is project-related.
 
+## I was reinventing the wheel unnecessarily
+
+It turns out there is a very convenient module in Python caled argparse. I will use that in the future instead of making my own method of handling command line arguments, which gave me quite a lot of problems. But even so, for SSG, I think I will just leave it as-is and not mess with anything. I could spend more time refactoring it to make it better, or I could spend that same amount of time working towards finishing the rest of the program. I think I'll go with the latter.
+
+You can always refactor things, make them slightly more efficient, etc. But unless you're doing some computationally-intensive thing that really requires efficiency, and you're doing things like calculating the big O notation stuff for your best/worst/average cases of some algorithm you implemented, then being slightly slower than optimal is just fine. I mean, that's what Python is all about. Nobody who wants high performance stuff uses Python when they could be using C instead. Of course, then there's Cython, which is an interesting superset of Python with C extensions. But the point I'm trying to make is that it's not a good use of my time to refactor this stuff even though I know it's not perfect.
+
+My future Python programs will use argparse to simplify the process of getting command line arguments... that is, if I want to keep on making command line programs instead of doing graphical stuff with Tkinter.
+
+Sometimes, I prefer using command line things. I still use vim for simple editing, and I also use ssh to use my Raspberry Pi. I also use command line git instead of the built-in IDE stuff that does it graphically. Command line programs can be very powerful. That being said, I still like to make graphical stuff every now and then. 
+
 ## JSON
 
 I still have to learn about JSON schemas and validation, but so far I have made some basic JSON stuff, like what an article will look like (the content, not the final generated static HTML file):
