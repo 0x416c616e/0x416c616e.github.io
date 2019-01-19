@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Day 19: Documentation Software Engineering, and Debugging"
-date:   2019-01-17 23:34:45 -0600
+date:   2019-01-17 12:34:45 -0600
 ---
 
 ## Don't just write code, write documentation too!
