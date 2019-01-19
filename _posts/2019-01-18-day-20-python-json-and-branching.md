@@ -4,6 +4,12 @@ title: "Day 20: Python, JSON, and Branching"
 date:   2019-01-18 7:30:00 -0600
 ---
 
+## Today's highlights
+
+Git, Docker, more Python learning, random Youtube tutorials about programming, learning about build tools, how Java has changed in recent versions, argparse, JSON, SSG project structure ideas, unfortunately not much progress with SSG itself, typosquatting, and sorting retrieved data with SQL.
+
+All of my future sections will have a "today's highlights" section in case my long-winded writing is too much for you.
+
 ## More git
 
 I am getting better at using git, slowly but surely. I use GitHub to host my repositories, but I could just as easily set up my own git server. The benefit of using GitHub is that it's not just a git server, but it has a lot of value-added things too, like the fact that it's a portfolio that employers can view to see that you actually know how to code outside of a classroom or bootcamp.
@@ -180,3 +186,53 @@ Here are some developer-related typos it will block:
 - 127.0.0.1[.]com -- the domain is 1[.]com with sub/tertiary domains
 
 If you accidentally hit ctrl+enter in a browser, it will add .com to whatever you wrote, which can be dangerous when you're trying to access a local server instead of something online, or even when you're just trying to search for something. Maybe my add-on should disable that somehow. Or maybe the user can just disable it manually, such as in about:config or whatever the current-day version of it is (I haven't changed advanced browser configurations in a while).
+
+## One more SQL lesson: the ORDER BY clause of the SELECT statement
+
+I did another lesson from the SQL book I'm reading. It isn't related to my Python/JSON project, but it will be useful for my future full stack web development projects, such as my planned IT ticketing system, which will be a monumental project, at least compared to everything else I've made.
+
+I've noticed that JSON is nice and all, but it would be better to store all this data in a database. I guess I could use MongoDB like I learned in college, which is basically *JSON: The Database*, but I've looked at a lot of job listings that really want people to know SQL. My college class very briefly covered it, but the emphasis was on noSQL instead, so I am teaching myself about relational databases and how to use them.
+
+Here's what I learned about SQL today (this is my version of the Feynman technique, explaining it to an audience on the internet):
+
+So in the last SQL lesson I did, and I should be doing these daily instead of once every couple days, I learned about the SELECT statement so you can retrieve data. But that data might be in seemingly random order. It makes more sense to sort it. And technically it's not "random" per se, just not sorted, and displayed based on how it's stored in the database. But to you, it will look random. Changes made to the database can also change the order stuff appears in. So you really need to sort stuff on your own. You can't just use a SELECT statement by itself. You need ORDER BY.
+
+Ever been to an online shopping site like Amazon and sorted stuff based on price? That requires querying databases and sorting. They might use slightly different stuff for their particular systems, but the general idea is that the ability to sort data is very important. I've learned about sorting data in programs before, but usually either stuff running in RAM, or contents from a file. Never database sorting. It's not that much different. Sorting is still sorting. Amazon probably has more sophisticated infrastructure though, like in-memory database caching, CDNs, distributed stuff, etc. The database I am working with is very simple by comparison: just a local MySQL database running on my computer. It's not even on my hypervisor, just my desktop. But it also simplifies everything and makes it less of a hassle to learn this way.
+
+In my old Java classes, we had to implement sorting algorithms from scratch instead of using built-in sorting methods. While that's good for learning, it's kind of unnecessary for real-world stuff, especially when the O(n) complexity of your own simple algorithm probably isn't as good as what the language provides, which is probably more optimized. 
+
+In this particular lesson about SQL, the implementation details about how the data is sorted simply don't matter. You don't care how your car accelerates when you hit the gas, you just care that it does. That's abstraction, and it's a key feature of most kinds of technology, computers or otherwise.
+
+The way to sort data in SQL is with ORDER BY.
+
+## What is a clause?
+
+SQL statements, such as SELECT, can have multiple clauses. 
+
+```
+USE databasename;
+SELECT *
+FROM tablename
+WHERE something=something
+ORDER BY some_column;
+```
+
+The all-caps words are the clauses. They are the pieces that make up a complete statement.
+
+In the above case, It's technically 2 statements. One to use a certain database, and then the next to retrieve some data with certain additional clauses.
+
+So what does ORDER BY do? What things can you order something by? It has to be a column. SQL databases are made up of multiple tables. A table can have rows (also known as records) and columns. If you have ever seen an Excel spreadsheet, it's just like that. In fact, Microsoft has a database called Access which will look very familiar to anyone who has ever used Excel. Though many database professionals regard Access as a toy database. And that's why I'm using MySQL (technically a DBMS, not a database, but you get the idea). 
+
+Anyway, here is an example of ordering data:
+
+![](/assets/order_by_sql1.PNG)
+
+## Pseudo-languages
+
+There are some pseudo-languages I have to learn, like regular expression and SQL. They are very different from general purpose languages like Python or Java, but still languages nonetheless. You really understand what general purpose means once you get more into specialized things that can only do certain things. I guess sed and awk are also kind of like that, for pattern matching and whatnot.
+
+## Disappointed
+
+It's getting to be the end of the day and I feel kind of disappointed with the progress I made today. Maybe I didn't do enough, or maybe I thought I'd do more programming on my SSG project. But for one reason or another, I ended up doing other things, and it didn't feel very productive. I'm not sure if that's because I'm just setting unrealistic goals for myself, or if I really do need to pick up the pace.
+
+I will try to pick up the pace tomorrow and do a lot more Static Site Generator coding. That will be my top priority. I doubt I will get it finished tomorrow, but I at least want to finish the JSON schema and validation stuff as well as testing the find-and-replace part for putting the JSON contents into the HTML files. I guess I could also use JavaScript for that, but I'd rather do this with Python because that's what I'm supposed to be learning right now (according to myself). JS isn't that interesting to me and people use it for way too many things. I know a little bit about it, and I've done some JS projects before, but I don't want to become a everything-should-be-JS kind of developer.
