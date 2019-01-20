@@ -80,13 +80,79 @@ Sometimes I say Linux instead of GNU/Linux. I know Linux is just a kernel, not a
 
 I like the way the book implies that you can just learn one concept a day. You don't have to learn everything all at once. I think part of why people think programming is hard is because they ask bad questions like "how do I make an app?" or "how do I program?" as if there's a simple answer that can be summed up in a sentence or two. Instead of thinking you need to learn SQL in a single setting, or hoping there will be a single short video that explains it all (and that you'll somehow absorb just by passively watching), this method of learning a single concept a day and actively following along with your own local database is great. Yesterday, I learned the ORDER BY clause in SQL. Today, I am learning the WHERE clause.
 
+I wrote the following database query to make it easy to understand each piece and how WHERE fits in:
+
 ```
-WHERE
+USE some_database;
+SELECT column1, column2
+FROM table_in_said_database
+WHERE column1 = criteria;
 ```
 
 Even before reading this chapter, I had some prior experience with using the WHERE clause, but only for SQL injection. If you use ```WHERE 1=1``` then it will choose everything, because 1 is always equal to 1. One interesting thing about this is that you only use one equal sign for evaluating a boolean value. In other languages, you use ```=``` for assignment and ```==``` as a comparison operator. But here ```=``` is simply comparison.
 
+WHERE lets you select which things to retrieve. Maybe you don't want everything. Ever been to an online store and you can limit the maximum price for an item? You can do that with WHERE clauses in SQL. That's basically what those frontend web buttons correspond to.
 
+In this example, using the dummy database and table from the SQL in 10 Minutes book, you can demonstrate the use of WHERE in a situation where you only want to look at products that cost $5 or less:
+
+![](/assets/where_clause1.PNG)
+
+You don't need to do WHERE in a SQL query in order to parse and filter its results. You can have the application do its own filtering. It's just like how you can use TCP for reliability, or you can use UDP and implement your own application layer reliability checks. There are many options here. A simple way to perform client-side searching is to simply pipe the output of a program to grep and pass grep a command line argument for whatever it is you're looking for. Just an idea. That being said, it would be more efficient to just use the WHERE clause. There's a reason why people use TCP over UDP when they need reliability -- it's easier and makes more sense. Why reinvent the wheel?
+
+ORDER BY needs to come after WHERE.
+
+WHERE can use all sorts of comparison operators, the kind you're used to seeing elsewhere. Just a little different.
+
+```
+=
+<>
+!=
+<
+<=
+!<
+>
+!>
+BETWEEN
+IS NULL
+```
+
+There's the standard equality, ```=```, which might confuse progreammers who associate it with assignment. Then ```<>``` represents non-equality, though you might be more used to seeing something like ```!=``` instead. Then you have the standard less than and less than or equal to, which are pretty self-explanatory and you'll see them in pretty much any language. Next is ```!<```, which is not less than. Then greater than and greater to or equal than. Next up, ```!>``` for not greater than. BETWEEN and IS NULL are pretty self-explanatory too.
+
+SQL is weird in the sense that there's very little to it, and it tries to use English words. But at the same time, I feel like some of it is less readable, when they change widely-used operators in favor of weird ones like the above. Some are normal, some are out in left field.
+
+To use BETWEEN, you have to use AND.
+
+```
+WHERE something BETWEEN 1 AND 100
+```
+
+Reminds me of range(min,max) in Python.
+
+NULL is when there is nothing in the field. Keep in mind that in some cases, you won't be allowed to have a null field. Some things are optional, some things are not.
+
+![](/assets/where_is_null.PNG)
+
+And that's all the SQL for today!
+
+## Active vs. passive education
+
+Sitting in a lecture is passive. Taking notes is active. Participating in class is active. Watching a Youtube tutorial is passive. Reading a book is passive. But how I'm learning SQL (and Python, and other stuff too) is by reading a book and following along. I really like programming books that have examples for you to go along with, and also include setup instructions. If the book didn't have a link to the extra downloads page, which had the database stuff and instructions, I wouldn't have known how to set up MySQL with the database with the dummy data they use in their examples. There is another database book I'm reading, called The Manga Guide to Databases, which was not very useful, because it covers high level concepts with no examples for you to do. I guess it's okay if you're using it in addition to something like the SQL in 10 Minutes book, but when a book or video series offers absolutely no follow-along exercises that you can do, then you're not going to retain that knowledge. Watching a few hours of programming video tutorials without writing any code is a huge waste of time. The same can be said for reading textbooks and not coding. 
+
+I used to think writing notes was the best thing for learning, but now I know coding is the best way to learn coding concepts. Not notes in a journal, not flash cards. That being said, you could consider this website to be a form of note-taking. If I need to brush up on something I learned a few days ago, I can always re-read what I wrote and look for the relevant heading. Looking at git commit message history can also be useful.
+
+## Learning by... making tutorials?
+
+I've always wondered why people make tech tutorials. I've come to the conclusion that many people are making the tutorials as they are learning. So someone making a Python tutorial series might just be a few steps ahead of what they're showing you. And they make the videos and the code they demonstrate not only to help you, but to help themselves as well. 
+
+One of my professors (as well as many other people) said that "the best way to learn is to teach" and I think it's at least partially true. It really forces you to revisit the topics that you read, really digest them, and then rephrase them and help other people understand them. But I'd rather make apps instead of tutorials. 
+
+## Open source isn't a magic bullet
+
+Just a random thought, not related to Python or whatever. 
+
+I develop open source software. I also use a lot of open source software. But to put complete trust in it makes no sense. Open source isn't a complete security model. It's more of a distribution and licensing model.
+
+Just because something is open source doesn't mean it's secure or safe. There can be security vulnerabilities in it, obfuscated backdoors, etc. If a repo offers a precompiled version, it might not even be based on the same source as the source code files they provide. Also, what's going to stop the maintainer from pushing a malicious commit in the future? They could either sell out (I've heard of ransomware developers propositioning FOSS devs and asking for access to their repos or accounts for $$$), or their accounts could be compromised. Or they could make a very stupid mistake and push it to master, such as this [amusing example](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123). 
 
 ## Genuinely enjoying programming
 
@@ -101,3 +167,15 @@ Someone might pay me to make them a website or build a computer for them, and af
 ## Other random learning
 
 Learned more about Docker, AWS EC2, JavaScript (just review because I haven't done JS stuff in a while), PHP, Kotlin replacing Java for Android development, code smells, refactoring, Python pass-by-object-reference, PyPy, clean code, python unit testing, code katas, etc. I am doing a lot of in-depth learning for Python, git, SQL, and JSON. But I also do a lot of cursory research, where I only find out really basic stuff about a wide range of topics. Some of them are topics I learn a whole lot more about later. Some are topics I will only know on a surface level. But I try to keep up with many different programming-related topics. I try to avoid technological tunnel vision. 
+
+## Modules in SSG
+
+I now created a module subdirectory in the SSG repository and it has blank module files for the following planned modules:
+
+- Articles
+- Settings
+- Projects
+- Initial setup
+- Site regeneration
+
+Even though I haven't added anything to them yet, it's good to make blank files to show what I want to add later.
