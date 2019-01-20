@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## Alan's 100 Days of Code (alans100daysofcode.com)
 
-You can use the [editor on GitHub](https://github.com/0x416c616e/0x416c616e.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is my website where I post daily updates about my programming and learning. I've gone to college for IT and computer science, which I will resume in the fall. But right now, among other things, I am teaching myself a lot of prorgamming on my own, and making a software portfolio consisting of many open source personal projects.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Currently, the site was made with Jekyll. However, I am working on a static site generator of my own called Static Site Generator, which is being written in Python. Eventually, that will replace Jekyll. I am making my own tools and it's very fun, educational, and empowering to do so.
 
-### Markdown
+My main website, at least for now, is still [Saint Louis Software](https://saintlouissoftware.com). As the name implies, Alan's 100 Days of Code is just a temporary project, which will over after 100 days. Maybe I will continue to do a lot of programming after that, but there might be other things going on that will take precedence over open source. But I will at least be finishing the #100daysofcode challenge. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It's been really great so far and I highly encourage other people to try it too (if you haven't already). I had prior programming experience, but even beginners can try it. It's cool to look back and see what you did in an approximately 3 month time frame.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/0x416c616e/0x416c616e.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
