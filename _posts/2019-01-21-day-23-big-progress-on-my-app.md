@@ -103,3 +103,60 @@ When doing typing tests, I like to listen to a 650-700bpm software metronome to 
 
 I started putting my subcomponents of SSG into modules. I learned about ```__init__.py``` and things like that. I also made a project class. I will be adding more classes to my project instead of having everything be local variables. The project class should really be a singleton, but I made it just a regular class for now because it's easier. The project class is used to get, set, or validate the project name. This will be used by generator.py, which is the entry point for the program. The other modules in the program aren't really classes, but they will have various functions and whatnot, similar to interfaces in other programs. These will be used for the separate submenus that the user is prompted to choose from, such as the article menu, settings menu, project menu, etc. There is also a module for the initial project setup.
 
+## Python classes
+
+I am making some classes and objects in Python. I've done this all before in Java, but Python isn't Java, and so I'm learning it more in-depth now.
+
+## Python regex and input validation
+
+I am working on validating the input from the user for the project name, for either opening a project, or making a new one. I need to finish a couple things before I can proceed with the articles, settings, etc.
+
+Once I get the program to the point where it checks the name, makes a new project by coping template files over to the new directory with the project name provided by the user, then it will be relatively easy to work on all of the other submenu features, like the article menu, settings menu, project menu, etc. These things all require having a project open, so I need to work on this sequentially. Then, after this feature is all said and done, then I can work on the other submenus out of order because they are not dependent on one another. I will also have to finalize the json and json schema stuff because all of these menus rely on json heavily. But I am getting farther along and it feels good knowing that my software is slowly but surely coming to life.
+
+Sometimes I doubt myself and my ability to make the complicated software I want to make. And it seems like, for every big project, it's always more complicated than I think it will be. This was supposed to be a project that only took me a couple days, and it's ended up taking me over two weeks and I'm still not done.
+
+## GitHub Ultimate course
+
+I have been neglecting this course for a while, but I really want to learn it right before proceeding. Today, I finished the 5th chapter in it, which covered branching and merging (a hugely important -- and also kind of difficult (at first, anyway) -- concept). Now I am incorporating branching into my currently-active repositories, such as staticsitegenerator.
+
+## Advanced algorithms and data structures
+
+I've been watching Youtube videos about interview questions for a few days now. Some of them have gone over algorithms I am not familiar with yet, like flood fill, and trying to figure out, in a 2D grid, which tiles have the most tiles around them with the same color. Flood fill algorithm. I heard someone mention that at the hackathon I went to earlier this year. There are also other katas and algorithms and whatnot that I need to practice on my own if I hope to be successful with these types of interviews. I can do really basic stuff like fizzbuzz, implementing basic data structures, reversing a string, and so on. But not all questions are equally easy. I am also learning more about hashmaps and hash tables, but I don't understand them 100% just yet, though things like stacks/queues/trees/arrays/linked lists make sense to me.
+
+I haven't actually taken a data structures and algorithms course just yet, so maybe I will learn this stuff then. But it's always good to learn things on your own, even if NEIU or wherever will offer classes related to it.
+
+## Healthcare stuff
+
+Moving closer towards doing more healthcare stuff. Depending on how long it takes, there might be some interruptions with my #100daysofcode challenge.
+
+## Closing GitHub issues
+
+Issues on GitHub can be related to adding new features, or fixing things that already exist. Think of it like a public to-do list for an open source project. I closed a couple staticsitegenerator repo issues today. For example, today I used my graphics tablet to draw a new favicon for the site. It just says SSG, but I drew the letters and did some color blending/smudging to make it seem a little more artsy instead of just being a text layer on a plain circle. Now, the site has the proper favicon, with the acronym for the project, rather than the old SFR favicon, which didn't really make sense, and I was only using it as a placeholder for a while.
+
+## Computing big O time complexity
+
+O(n), O(n^2), O(logn), O(1), O(2^n) etc are all possible time spaces for how long it will take an algorithm to run, whether you're talking about worst case, average case, or best case scenario. At one point in time, I remembered how to calculate this stuff. But because it's been a while, I might need to learn this again. Some Youtube videos about succeeding in interviews mentioned that big O notation might be asked during interviews, and it's also mentioned in Cracking the Coding Interview, which is a book I am slowly but surely reading. 
+
+## Regular expressions
+
+Python has a module called ```re``` which can be used for pattern matching. I learned regex back in community college, but it's been a while since I used it and I've forgotten a lot of the specifics, even if I remember the vague overarching concepts behind it.
+
+For my SSG project name stuff, for either opening a project or making a new one, it has to have a valid name.
+
+But before getting into technical regex stuff, I have to lay out the basics of what my project_name string can and cannot be:
+- Cannot be 'quit' or 'example' or 'template' or 'testing' or 'test' or 'projects' because those are reserved words. I have an example project.
+- No spaces or or quotes or newlines or slashes or basically anything not just plain alphanumeric aside from dashes or underscore for separators
+- Cannot be one character long, because my text menus have special meanings behind numbers
+- Cannot contain special characters, just uppercase letters, lowercase letters, numbers, and ```-``` or ```_```
+- I don't really know what a practical limit length is, but I'll just say 32 characters to keep it simle. That's pretty long anyway.
+
+For the reserved words, I can just do simple checks. But I need to proceed with regex after that.
+
+## Input validation of untrusted user data
+
+You might not be able to trust what the user provides to you. They might not necessarily be malicious, but they might just be giving you incorrect or invalid information. For example, spaces in a folder name can cause problems, and slashes designate subdirectories, which is confusing in a file path. Also, . means the current directory, whereas .. means the parent directory relative to the current working directory. If you don't validate things like that, you can end up with path traversal bugs, which, for a networked application, are serious security issues that can lead to people grabbing things like ../../../../../../../../../../../../etc/passwd or ../../../../../../../../../../../../etc/shadow, which is not good.
+
+Other examples of needs for input validation include SQL injection, overflows, fuzzing, insecure deserialization, "trust zones" (that assume certain input has already been validated and is now trustworthy if it made it that far), etc.
+
+For my personal SSG project, there isn't really so much a security concern, but if the user provides bad information, it can cause problems. What if they enter nothing and just hit enter? Then I have to check to make sure the input isn't null. I also have to make sure it isn't too long, because path length can't be unlimited. And there are some reserved words that my program uses for commands and/or other directories. The word 'quit' is used to quit or end input for certain things, getting out of menu loops. So having the user be able to make a project called quit would cause problems, and then they might not be able to open it in the future. It would only harm that particular user, nobody else. It's not hacking, just preventing bugs and inconveniences/undefined behavior.
+
