@@ -28,6 +28,22 @@ The issue with software development is that you can come up with ideas for thing
 
 Some people pretend that they can remember everything. I know I can't, so that's why I like to do things like this in order to write down my thoughts and designs before I forget about them. That's also why self-documenting code, brief comments, and documentation pages, such as wikis or readmes, can be very useful. But the problem with verbose documentation is that a small change to code means you have to read through long documentation to figure out which parts need to be updated. 
 
+## Progress I made today
+
+Today, here are the features I finished in static site generator:
+
+- Started to design and work on initial_setup_module.py
+- Finished more json and file stuff (for the template) -- this is because the initial setup module gets the user to set up basic info about the project and stores it in settings.json and about.json, so I really had to figure out what will go in these files -- about.json is very straightforward, but settings.json has a lot of different settings in it
+- Made function prototypes for what will be in the setup module when it's done
+- Imported the module in generator.py, which is the entry point for the whole program
+- Wrote and tested ```check_if_setup_has_been_completed(project_name)``` in the setup module
+- implemented if/else check function call in generator.py's print_numbered_menu(menu, proj) function
+    - The setup check will run after a project has been successfully opened -- if the project has never been fully initialized, it will restart the entire process, and only after it's done will it save ```True``` to finished_initial_setup.txt
+- Started working on the second function in the initial setup module (not finished yet though): 
+
+![](/assets/initial_setup_module1.PNG)
+
+
 ## More refurbished server progress
 
 I recently got a computer for free. I upgraded it using a combination of free stuff from salvaged dead computers, and a new SSD that I got for it. In total, it has a dual-core processor, heatsink from a quad-core processor, 12GB of DDR3 RAM, a 120GB SSD, and 2x 500GB drives that I plan on using in RAID 1 for redundancy and better read speeds. I am going to install Windows Server Essentials on it so that it can act as a domain controller.
