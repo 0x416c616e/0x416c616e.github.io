@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 24: Real Life Stuff"
+title: "Day 25: Real Life Stuff"
 date:   2019-01-22 11:22:30 -0600
 ---
 
