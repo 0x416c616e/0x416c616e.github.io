@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Day 25: Real Life Stuff"
-date:   2019-01-22 11:22:30 -0600
+date:   2019-01-23 11:22:30 -0600
 ---
 
 ## Healthcare appointment

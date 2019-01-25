@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Day 26: Initial Setup Module"
-date:   2019-01-22 11:22:30 -0600
+date:   2019-01-24 11:22:30 -0600
 ---
 
 ## Initial setup module
