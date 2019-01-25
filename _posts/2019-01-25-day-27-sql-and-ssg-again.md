@@ -4,13 +4,25 @@ title: "Day 27: SQL and SSG Again"
 date:   2019-01-25 1:22:30 -0600
 ---
 
-## More of the same
+## More progress on my SSG app
 
 Today I did more Python programming for SSG. I am slowly but surely chipping away at the development of it. And more importantly, I've finished all the concrete details for the design, so it's very clear what I need to do. That is the hard part. Once you've figured out what you're going to program, it's not that hard to go and implement it. Programming is only more difficult when you're not sure how to design something, or just coding without any sense of direction. But I like to plan things out before jumping right in and coding. That's why this phase is a lot easier for me now. Project management, sprints, etc. all really matter.
+
+Today, I worked on my initial setup module more. 
+
+After you successfully open a website project in Static Site Generator, it checks a file to see if you've finished the initial setup or not. If not, then it will run the functions to set the settings input and about input. There's some basic information that the site needs before it can really do anything. You need basic stuff like email address, website name, and some social media links. The website name is not the same as the project name. Project names should be things like alans_cool_website and then the title could be something like "Alan's Cool Website" because of issues with spaces in command line arguments, and issues with how operating systems handle special characters. 
+
+Because a user could hit ctrl+c or close the terminal window after setting up the project, there is no guarantee that they entered in all of the information in order to configure the project. And if they close the program when it's still getting input, it won't have written anything to the project's JSON configuration files, settings.json and about.json, which means none of the settings would get saved at all. So that's why it does the check when you first open a project. When the project successfully has the initial setup completed, the finished_intial_setup.txt file has its contents changed to reflect that it no longer needs to go through the setup process. Then, the next time it's opened, it will skip the initial setup stuff. The user can always change the settings later, but that is separate from the setup module, and the settings would be changed one at a time rather than getting input for all of them. This is useful is the person making the site decides that they want to change the name or links or whatever later.
+
+Also, one design choice I had was to exclude the author name from the settings.json. This is deliberate, because I want SSG to let people make sites that have multiple contributors. So every time you write an article, you have to specify who the author is. It might be slightly inconvenient for people who don't have multiple people writing for their site, but it's great if a group of people all work on the same project. And it's still more convenient than writing a site from scratch, even with having to enter the author name every time.
+
+Today, I finished the initial setup module. Now I'm going to start working on the article module. The setup module is important because all projects need to be set up with some basic information. But once that's all said and done, there are a few key areas I need to work on. What I've decided to work on now is to do the article module/menu because then you can deal with articles, or I guess you could call them posts. Articles are an essential part of a site, whether it's made with Wordpress, Jekyll, SSG, whatever. People want content, and people want a timeline. The article module by itself only deals with getting user input and saving it to JSON files. 
 
 ## SQL learning: LIKE and *
 
 I did another SQL chapter today. There are 22 chapters in this book and today I did the 6th one. 
+
+Here's what I learned (not finished yet):
 
 ## Limiting distractions
 
@@ -84,15 +96,6 @@ Unlike most consumer-grade switches, a Catalyst 2950 is what's called a managed 
 
 To kind of test the waters, I am only getting one Windows 10 Pro key to upgrade one workstation to see how it goes, before going ahead and upgrading all Windows 10 workstations here to the Pro edition.
 
-## C programming
-
-I read the next chapter of *Teach Yourself C in One Hour a Day*. 
-
 ## New git repos
 
 I made new git repos for my notes repositories for learning SQL and C. These are just like my gitUdemyLearning and misc_python_1 repos: just educational notes and testing rather than being fully-fledged apps. 
-
-## Computer Organization and Design book
-
-Today, I read the first chapter of the book *Computer Organization and Design*.
-
