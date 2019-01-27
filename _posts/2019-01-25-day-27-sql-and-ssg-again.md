@@ -18,11 +18,7 @@ Also, one design choice I had was to exclude the author name from the settings.j
 
 Today, I finished the initial setup module. Now I'm going to start working on the article module. The setup module is important because all projects need to be set up with some basic information. But once that's all said and done, there are a few key areas I need to work on. What I've decided to work on now is to do the article module/menu because then you can deal with articles, or I guess you could call them posts. Articles are an essential part of a site, whether it's made with Wordpress, Jekyll, SSG, whatever. People want content, and people want a timeline. The article module by itself only deals with getting user input and saving it to JSON files. 
 
-## SQL learning: LIKE and *
-
-I did another SQL chapter today. There are 22 chapters in this book and today I did the 6th one. 
-
-Here's what I learned (not finished yet):
+Across all files, not counting some redundant stuff, SSG is about 2,000 lines of code. It's far from finished though.
 
 ## Limiting distractions
 
@@ -76,25 +72,12 @@ Other stuff I researched today:
 - ```xargs```
     - A cool way to pipe output from one command line program as a command line argument for another program.
 - Imposter syndrome in tech
-- Python xrange function
-- Context switching
-- The differences between ```input()``` and ```raw_input()``` in Python
 
 ## Django 
 
 Today, I downloaded a Bitnami Django stack and set it up on my ESXi hypervisor.
 
 The process of downloading a premade Django VM and then installing it in ESXi only takes a couple of minutes. It's much faster than setting everything up manually. Hypervisors are great in the sense that they allow you to set up many virtual servers quickly and easily without having to always buy new hardware. It's true that I currently have two bare metal servers -- one for FreeNAS, and the other for Windows Server. But most of my servers are virtual machines on my VM server. I feel very comfortable with my virtualization skills, though I think I need to get more into containers instead of just VMs.
-
-## Networking equipment
-
-Because I currently don't have enough network ports for all my servers, I'm ordering a Cisco Catalyst 2950 and some adapter cables so that I can connect my computer to the console port for initially setting up the startup-config in Cisco IOS. From there, I will be able to remotely administrate it. I learned Cisco IOS and routing/switching stuff at College of DuPage, but I haven't used it in a while. This will be useful, because I need a switch, and it'll also be an educational project, kind of like my Windows Server/Active Directory project that's in the works. 
-
-Unlike most consumer-grade switches, a Catalyst 2950 is what's called a managed switch, meaning you can log into it and change a lot of settings. The operating system it's running is called Cisco IOS, which stands for Internetworking Operating System. I have used IOS a lot in the past, whether it was on Cisco Packet Tracer, GNS3, or on lab equipment in a classroom. But I am admittedly a little rusty. 
-
-## Upgrading Windows to Windows 10 Pro
-
-To kind of test the waters, I am only getting one Windows 10 Pro key to upgrade one workstation to see how it goes, before going ahead and upgrading all Windows 10 workstations here to the Pro edition.
 
 ## New git repos
 
