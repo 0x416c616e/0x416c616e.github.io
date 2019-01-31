@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 28: Starting the article module"
+title: "Day 28: Starting the Article Module"
 date:   2019-01-26 1:05:38 -0600
 ---
 

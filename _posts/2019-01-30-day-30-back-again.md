@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 30: Back again"
+title: "Day 30: Back Again"
 date: 2019-01-30 11:05:38 -0600
 ---
 

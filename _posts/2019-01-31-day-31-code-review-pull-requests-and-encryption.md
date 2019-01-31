@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 30: Code review and pull requests"
+title: "Day 31: Code Review, Pull Requests, and Encryption"
 date: 2019-01-31 11:12:00 -0600
 ---
 
@@ -52,7 +52,13 @@ Naming conventions are pretty straightforward for variables, functions, etc. But
 
 ## PGP email encryption
 
-Today I decided to learn more about mail encryption with PGP.
+Today I decided to learn more about mail encryption with PGP. In looking up PGP, I came across GPG.
+
+## GPG4win and Keybase
+
+Today I set up GPG4win, which is GNU Privacy Guard for Windows. Keybase lets you manage keys. GPG is used for email encryption.
+
+I will have to get someone else I know to use GPG4win in order for me to be able to use GPG. There are public and private keys, and you need someone else's public key and your private key in order to encrypt a message.
 
 ## People act like you're dead if you don't check for phone 24/7
 
@@ -185,3 +191,7 @@ It's a very complicated issue. How can we solve it? Automatic updates? Maybe, ma
 The Erlang programmer I mentioned earlier blogged about a certain feature of his favorite language: self-healing. It's the ability for a program to install updates without even restarting the program or the computer. Is this the future? I'm not so sure, because it basically sounds like data execution to me, which is not good for security. 
 
 As I was writing this, WordFence sent me an email notification saying there is a new update available for one of the Wordpress plugins on one of my WP sites (this site doesn't use WP though, just some of my other ones). If you don't update Wordpress and its plugins, people might hack your site and use it to distribute ransomware, or other kinds of malware too. Maybe even cryptocurrency miners. 
+
+## Desktop publishing
+
+I'm starting to look into desktop publishing because I'm going to turn a lot of my software development essays into a free e-book once I'm done with #100daysofcode.

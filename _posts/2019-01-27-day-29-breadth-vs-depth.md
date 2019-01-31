@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Day 29: Breadth vs. depth"
+title: "Day 29: Breadth vs. Depth"
 date:   2019-01-27 1:05:38 -0600
 ---
 
