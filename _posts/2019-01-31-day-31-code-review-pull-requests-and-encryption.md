@@ -24,7 +24,7 @@ Some techniques aren't better or worse than others. Of course, big O notation ca
 
 ## Mixing programming language ideas
 
-Just like how someone who speaks Spanish and English might occasionally speak Spanglish, a developer who knows Python, JavaScript and C++ might occasionally think in PythonScript++. Each programming language has its own design philosophy, and it can be good to know multiple languages to see how things are done differently. Not all languages have the same things, like strong vs. weak typing, dynamic typing, built-ins vs. third party libraries, boilerplate, verbosity vs. brevity vs. terseness, 
+Just like how someone who speaks Spanish and English might occasionally speak Spanglish, a developer who knows Python, JavaScript and C++ might occasionally think in PythonScript++. Each programming language has its own design philosophy, and it can be good to know multiple languages to see how things are done differently. Not all languages have the same things, like strong vs. weak typing, dynamic typing, built-ins vs. third party libraries, boilerplate, verbosity vs. brevity vs. terseness, and so on.
 
 ## Number of GitHub contributions isn't the best way to measure the accomplishments of a developer
 
@@ -168,9 +168,9 @@ Making tech timeless is worse in the short-term, but better in the long run. The
 
 I'm not really sure where I was going with this, but I think all aspects of technology should consider longer-term things. 
 
-## YML
+## YML/YAML
 
-I am trying to get into CI eventually, using Travis CI. I haven't started it just yet. I like to get some background info about something before diving right in. Travis CI uses .yml files, so today I learned more about YML. 
+I am trying to get into CI eventually, using Travis CI. I haven't started it just yet. I like to get some background info about something before diving right in. Travis CI uses .yml files, so today I learned more about YML. I didn't just look up stuff about YAML itself, but I also looked up how to use it in Python.
 
 ## Software updates: will they ever be solved?
 
@@ -195,3 +195,20 @@ As I was writing this, WordFence sent me an email notification saying there is a
 ## Desktop publishing
 
 I'm starting to look into desktop publishing because I'm going to turn a lot of my software development essays into a free e-book once I'm done with #100daysofcode.
+
+## Valgrind
+
+I've never used Valgrind before, and I don't know if I ever will, but I looked it up anyway. I am trying to learn more about debugging-related tools, since a lot of the time, you're fixing problems in existing code rather than adding new features. GDB is another important tool. I also like the built-in debuggers in JetBrains IDEs, such as PyCharm.
+
+## Things I should add for future GitHub projects
+
+The community tab on a repo says you should have a lot of different things, including a license, readme, etc. I already do basic stuff. But I don't currently add the following stuff to my repos:
+
+- Code of conduct
+- Contributing
+- Issue templates
+- Pull request template
+
+## More in-depth issues
+
+So far, I'd been doing pretty basic GitHub issues stuff. Now I add labels, lock issues, resolve them, add comments/updates, emoji reactions, etc. It seems like a lot of my issues are 'wontfix' or 'enhancement' (or both for issues I decided against implementing due to time and effort constraints).
