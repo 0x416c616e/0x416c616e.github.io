@@ -85,3 +85,40 @@ After it's done, I will convert the entries to a book, maybe called something li
 - The digital divide
 - Being the family tech support person even though you're primarily a software developer, not in computer repair
 - How and why I got into tech
+- Living in completely different worlds -- that Toastmasters guy talking about nwspaper ads even though newspapers are dying
+- Generational differences and tech
+- Neoluddism
+- People who overestimate their tech skills
+- Building computers: how, why, and it's kind of therapeutic
+- How building computers has changed over time (ex: cases used to have very sharp metal)
+- English words in programming language syntax
+- Analogies and metaphors used in tech naming
+- There's more to my life and identity than tech, but sometimes people label me as "the tech guy" because they don't know me well or just want a lazy way to categorize someone
+- People who make the mistake of getting a gaming PC "for computer science" in college and then clearly aren't that interested in programming itself
+- Back when I had a 4.0 and spent too much time studying and not enough time on more important things
+- How I use flash cards and notes for studying
+- How people who think they're smart will present information in an intentionally-confusing way in an attempt to look smart, like the calculus tutor I once had who showed me formulas I didn't encounter in the textbook yet, because he wanted to show off his math knowledge, even though it was not related to what we were going over. That's different from programming, which is supposed to be easy to read. 
+- Lots of useless learning in academia vs. practical things that can be used in the real world, and people thinking complex/difficult = good
+- Simple solutions are the best, and simple explanations are the best
+- Programming and critical thinking
+- Dishonest ways people can advance their careers in tech
+- Non-contributions, such as fixing a typo in a readme
+- "What you don't know won't hurt you" -- bad attitude about data mining from people who barely even know how to type a password, let alone wrap their head around concepts like data mining and app permissions
+- Why privacy is valuable
+- My social media strategy and some obvious mistakes to avoid (like following 50k people, or posting controversial things)
+- PCI and other regulatory compliance stuff doesn't guarantee security
+- Is security even possible?
+- Important historical figures in computer science and technology
+- Why I left IT for CS
+- When to cancel a project because it's not feasible, too many bugs, people aren't working well together, etc.
+	- Sunk cost fallacy
+- When non-tech people talk about an app idea, they concentrate only on features. When I come up with an app idea, I think about cost, development time, how difficult it would be to make it, monetization (or a lack thereof), competing apps, and how good it would look on my resume and/or website.
+- Write about my Abyss Dropper and file upload vulnerability stuff I've been working on, and also write about bug bounties in general
+- It's not just computers and phones -- mention how software and computers are used for elevators, trains, air traffic control, air conditioning, physical security systems, embedded devices (and the difference between embedded and IoT), etc.
+- Security monocultures and Linux in everything
+- Convert some of my old security presentation slides (and SLS website blog post) to writing for this website/book
+- Shodan
+- Malware having repercussions in the "real world" such as Stuxnet and other SCADA/ICS stuff
+- There is less of a gap between "real world" and online now, compared to in the past (also: public but seems private with computer rooms/home offices)
+- Will tech innovations eventually slow down like other industries?
+
