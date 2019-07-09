@@ -212,3 +212,14 @@ The community tab on a repo says you should have a lot of different things, incl
 ## More in-depth issues
 
 So far, I'd been doing pretty basic GitHub issues stuff. Now I add labels, lock issues, resolve them, add comments/updates, emoji reactions, etc. It seems like a lot of my issues are 'wontfix' or 'enhancement' (or both for issues I decided against implementing due to time and effort constraints).
+
+## Fixing templates
+
+I fixed some template stuff for the static site generator project. I also added a transparent 1x1 pixel PNG image called placeholder.png, which can be used if the user does not include a lead image for an article.
+
+## Trello/kanban (project management)
+
+I started using Trello again. It's a kanban board thing that helps you figure out what you need to do (low priority), what you need to do (high priority), what you're currently doing, and what's done. 
+
+I already made a lot of good things to do in a new Trello board specifically for my 100daysofcode
+
